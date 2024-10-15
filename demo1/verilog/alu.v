@@ -12,7 +12,7 @@
 module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, Zero, Ofl);
     //TODO: change 010(sra) to rotate right
     parameter OPERAND_WIDTH = 16;    
-    parameter NUM_OPERATIONS = 3;
+    parameter NUM_OPERATIONS = 4;
        
     input  [OPERAND_WIDTH -1:0] InA ; // Input operand A
     input  [OPERAND_WIDTH -1:0] InB ; // Input operand B

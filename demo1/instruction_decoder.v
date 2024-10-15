@@ -69,21 +69,22 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
                 setregdst = 2'b01;
                 setbsource = 2'b01;
                 setregwrt = 1;
-                setaluop = 3'b100;
+                setaluop = 4'b0100;
+                setregsrc = 2'b10;
             end
             5'b01001: begin//SUBI Rd, Rs, immediate
                 setregdst = 2'b01;
                 setbsource = 2'b01;
                 setregwrt = 1;
                 setinva = 1;
-                setaluop = 3'b100;
+                setaluop = 4'b0100;
             end
             5'b01010: begin//XORI Rd, Rs, immediate 
                 setregdst = 2'b01;
                 setbsource = 2'b01;
                 set0ext = 1;
                 setregwrt = 1;
-                setaluop = 3'b111;
+                setaluop = 4'b0111;
             end
             5'b01011: begin//ANDNI Rd, Rs, immediate
                 setregdst = 2'b01;
@@ -91,7 +92,7 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
                 set0ext = 1;
                 setregwrt = 1;
                 setinvb = 1; 
-                setaluop = 3'b101;
+                setaluop = 4'b0101;
             end
             5'b01100: begin
             end
@@ -102,7 +103,11 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
             end
             5'b01111: begin
             end
-            5'b10000: begin
+            5'b10000: begin //ST Rd, Rs, immediate
+                setbsource = 2'b01;
+                setmemwrt = 1;
+                setimmsrc = 1;
+                setaluop = 4'b0100;
             end
             5'b10001: begin
             end
@@ -114,21 +119,25 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
                 setregdst = 2'b01;
                 setbsource = 2'b01;
                 setregwrt = 1;
-                setaluop = 3'b000;
+                setaluop = 4'b0000;
             end
             5'b10101: begin //SLLI Rd, Rs, immediate 
                 setregdst = 2'b01;
                 setbsource = 2'b01;
                 setregwrt = 1;
-                setaluop = 3'b001;
+                setaluop = 4'b0001;
             end
             5'b10110: begin //RORI Rd, Rs, immediate
                 setregdst = 2'b01;
                 setbsource = 2'b01;
                 setregwrt = 1;
-                setaluop = 3'b010;
+                setaluop = 4'b0010;
             end
-            5'b10111: begin
+            5'b10111: begin//SRLI Rd, Rs, immediate
+                setregdst = 2'b01;
+                setbsource = 2'b01;
+                setregwrt = 1;
+                setaluop = 4'b0011;
             end
             5'b11000: begin
             end
