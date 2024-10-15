@@ -10,7 +10,7 @@
     (OFL).
 */
 module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, Zero, Ofl);
-
+    //TODO: change 010(sra) to rotate right
     parameter OPERAND_WIDTH = 16;    
     parameter NUM_OPERATIONS = 3;
        

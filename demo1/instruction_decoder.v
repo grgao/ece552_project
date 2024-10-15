@@ -5,7 +5,7 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
     output regwrt;
     output [1:0] bsource;
     output branch;
-    output [1:0] aluop;
+    output [2:0] aluop;
     output alujmp;
     output invb;
     output inva;
@@ -20,7 +20,7 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
     reg setregwrt;
     reg [1:0]setbsource;
     reg setbranch;
-    reg [1:0]setaluop;
+    reg [2:0]setaluop;
     reg setalujmp;
     reg setinvb;
     reg setinva;
@@ -38,7 +38,7 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
         setregwrt = 0;
         setbsource = 2'b00;
         setbranch = 0;
-        setaluop = 2'b00;
+        setaluop = 3'b000;
         setalujmp = 0;
         setinvb = 0;
         setinva = 0;
@@ -69,18 +69,21 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
                 setregdst = 2'b01;
                 setbsource = 2'b01;
                 setregwrt = 1;
+                setaluop = 3'b100;
             end
             5'b01001: begin//SUBI Rd, Rs, immediate
                 setregdst = 2'b01;
                 setbsource = 2'b01;
                 setregwrt = 1;
                 setinva = 1;
+                setaluop = 3'b100;
             end
             5'b01010: begin//XORI Rd, Rs, immediate 
                 setregdst = 2'b01;
                 setbsource = 2'b01;
                 set0ext = 1;
                 setregwrt = 1;
+                setaluop = 3'b111;
             end
             5'b01011: begin//ANDNI Rd, Rs, immediate
                 setregdst = 2'b01;
@@ -88,11 +91,12 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
                 set0ext = 1;
                 setregwrt = 1;
                 setinvb = 1; 
+                setaluop = 3'b101;
             end
-            5'b01100: begin//ROLI Rd, Rs, immediate
-                
+            5'b01100: begin
             end
             5'b01101: begin
+
             end
             5'b01110: begin
             end
@@ -106,11 +110,23 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
             end
             5'b10011: begin
             end
-            5'b10100: begin
+            5'b10100: begin //ROLI Rd, Rs, immediate
+                setregdst = 2'b01;
+                setbsource = 2'b01;
+                setregwrt = 1;
+                setaluop = 3'b000;
             end
-            5'b10101: begin
+            5'b10101: begin //SLLI Rd, Rs, immediate 
+                setregdst = 2'b01;
+                setbsource = 2'b01;
+                setregwrt = 1;
+                setaluop = 3'b001;
             end
-            5'b10110: begin
+            5'b10110: begin //RORI Rd, Rs, immediate
+                setregdst = 2'b01;
+                setbsource = 2'b01;
+                setregwrt = 1;
+                setaluop = 3'b010;
             end
             5'b10111: begin
             end
@@ -134,8 +150,5 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
             end
         endcase
     end
-
-
-
 
 endmodule
