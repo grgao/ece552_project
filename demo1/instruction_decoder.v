@@ -76,11 +76,21 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
                 setregwrt = 1;
                 setinva = 1;
             end
-            5'b01010: begin
+            5'b01010: begin//XORI Rd, Rs, immediate 
+                setregdst = 2'b01;
+                setbsource = 2'b01;
+                set0ext = 1;
+                setregwrt = 1;
             end
-            5'b01011: begin
+            5'b01011: begin//ANDNI Rd, Rs, immediate
+                setregdst = 2'b01;
+                setbsource = 2'b01;
+                set0ext = 1;
+                setregwrt = 1;
+                setinvb = 1; 
             end
-            5'b01100: begin
+            5'b01100: begin//ROLI Rd, Rs, immediate
+                
             end
             5'b01101: begin
             end
