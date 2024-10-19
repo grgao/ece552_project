@@ -11,4 +11,5 @@
 //TODO: change mem write data to rd, not coming out of mux
 
 //Notes: changed branch to a 3 bit control signal
+//Notes: added SEQ, SLT... to branch opcodes to know which flags to look for
 

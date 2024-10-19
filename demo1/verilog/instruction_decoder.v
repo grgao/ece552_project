@@ -5,7 +5,7 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
     output sel0ext;
     output regwrt;
     output [1:0] bsource;
-    output [2:0] branch;
+    output [3:0] branch;
     output [3:0] aluop;
     output alujmp;
     output invb;
@@ -19,7 +19,7 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
     reg set0ext;
     reg setregwrt;
     reg [1:0]setbsource;
-    reg [2:0]setbranch;
+    reg [3:0]setbranch;
     reg [3:0]setaluop;
     reg setalujmp;
     reg setinvb;
@@ -52,7 +52,7 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
         set0ext = 0;
         setregwrt = 0;
         setbsource = 2'b00;
-        setbranch = 3'b000;
+        setbranch = 4'b0000;
         setaluop = 4'b0000;
         setalujmp = 0;
         setinvb = 0;
