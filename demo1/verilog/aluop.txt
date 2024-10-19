@@ -1,0 +1,12 @@
+000:rll
+001:sll
+010:rr
+011:srl
+100:add
+101:and
+110:or
+111:xor
+
+//TODO: change 010(sra) to rotate right in alu
+//TODO: change mem write data to rd, not coming out of mux
+
