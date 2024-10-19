@@ -1,8 +1,8 @@
 `include "opcodes.v"
-module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, aluop, alujmp, invb, inva, memwrt, immsrc, asource, regsrc);
+module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch, aluop, alujmp, invb, inva, memwrt, immsrc, asource, regsrc);
     input [4:0] instruction;
     output [1:0]regdst;
-    output 0ext;
+    output sel0ext;
     output regwrt;
     output [1:0] bsource;
     output [2:0] branch;
@@ -27,11 +27,11 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
     reg setmemwrt;
     reg setimmsrc;
     reg setasource;
-    reg setregsrc;
+    reg [1:0] setregsrc;
     reg setdmp;
 
     assign regdst = setregdst;
-    assign 0ext = set0ext;
+    assign sel0ext = set0ext;
     assign regwrt = setregwrt;
     assign bsource = setbsource;
     assign branch = setbranch;
@@ -86,7 +86,7 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
                 setregdst = 2'b00;
                 setbsource = 2'b01;
                 setregwrt = 1;
-                setaluop = ADD;
+                setaluop = `ADD;
                 setregsrc = 2'b10;
             end
             5'b01001: begin//SUBI Rd, Rs, immediate
@@ -94,14 +94,14 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
                 setbsource = 2'b01;
                 setregwrt = 1;
                 setinva = 1;
-                setaluop = ADD;
+                setaluop = `ADD;
             end
             5'b01010: begin//XORI Rd, Rs, immediate 
                 setregdst = 2'b00;
                 setbsource = 2'b01;
                 set0ext = 1;
                 setregwrt = 1;
-                setaluop = XOR;
+                setaluop = `XOR;
             end
             5'b01011: begin//ANDNI Rd, Rs, immediate
                 setregdst = 2'b00;
@@ -109,39 +109,39 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
                 set0ext = 1;
                 setregwrt = 1;
                 setinvb = 1; 
-                setaluop = AND;
+                setaluop = `AND;
             end
-            5'b01100: begin // BEQZ Rs, immediate
-                setbranch = BEQZ;
+            5'b01100: begin // `BEQZ Rs, immediate
+                setbranch = `BEQZ;
             end
-            5'b01101: begin // BNEZ Rs, immediate
-                setbranch = BNEZ;
+            5'b01101: begin // ` Rs, immediate
+                setbranch = `BNEZ;
             end
             5'b01110: begin // BGEZ Rs, immediate
-                setbranch = BGEZ;
+                setbranch = `BGEZ;
             end
             5'b01111: begin // BLTZ Rs, immediate
-                setbranch = BLTZ;
+                setbranch = `BLTZ;
             end
             5'b10000: begin //ST Rd, Rs, immediate
                 setbsource = 2'b01;
                 setmemwrt = 1;
-                setaluop = ADD;
+                setaluop = `ADD;
             end
             5'b10001: begin //LD Rd, Rs, immediate
                 setregdst = 2'b00;
                 setbsource = 2'b01;
                 setregwrt = 1;
                 setregdst = 2'b00;
-                setaluop = ADD;
+                setaluop = `ADD;
             end
             5'b10010: begin // SLBI Rs, immediate
                 setasource = 1;
-                setaluop = OR;
+                setaluop = `OR;
                 set0ext = 1;
                 setbsource = 2'b10;
                 setregwrt = 1;
-                setregsrc = 1'b10;
+                setregsrc = 2'b10;
                 setregdst = 2'b01;
             end
             5'b10011: begin//STU Rd, Rs, immediate
@@ -149,56 +149,56 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
                 setregdst = 2'b01;
                 setmemwrt = 1;
                 setregwrt = 1;
-                setaluop = ADD;
+                setaluop = `ADD;
             end
             5'b10100: begin //ROLI Rd, Rs, immediate
                 setregdst = 2'b00;
                 setbsource = 2'b01;
                 setregwrt = 1;
-                setaluop = RLL;
+                setaluop = `RLL;
             end
             5'b10101: begin //SLLI Rd, Rs, immediate 
                 setregdst = 2'b00;
                 setbsource = 2'b01;
                 setregwrt = 1;
-                setaluop = SLL;
+                setaluop = `SLL;
             end
             5'b10110: begin //RORI Rd, Rs, immediate
                 setregdst = 2'b00;
                 setbsource = 2'b01;
                 setregwrt = 1;
-                setaluop = RRL;
+                setaluop = `RRL;
             end
             5'b10111: begin//SRLI Rd, Rs, immediate
                 setregdst = 2'b00;
                 setbsource = 2'b01;
                 setregwrt = 1;
-                setaluop = SRL;
+                setaluop = `SRL;
             end
             5'b11000: begin // LBI Rs, immediate
                 setregwrt = 1;
                 setbsource = 2'b10;
-                setregsrc = 1'b10;
+                setregsrc = 2'b10;
                 setregdst = 2'b01;
-                setaluop = RTB;
+                setaluop = `RTB;
             end
             5'b11001: begin //BTR Rd, Rs
                 setregdst = 2'b00;
                 setregwrt = 1;
-                setaluop = BTR;
+                setaluop = `BTR;
             end
             5'b11010: begin // ROL, SLL, ROR, SRL : Rotate or shift
                 setregwrt = 1;
                 setregdst = 2'b10;
                 setbsource = 2'b00;
-                setaluop = ROS;
+                setaluop = `ROS;
                 setregsrc = 2'b10;
             end
-            5'b11011: begin //ADD, SUB, XOR, ANDN : Logical or arithmetic
+            5'b11011: begin //`ADD, SUB, `XOR, ANDN : Logical or arithmetic
                 setregdst = 2'b10;
                 setbsource = 2'b00;
                 setregwrt = 1;
-                setaluop = LOA;
+                setaluop = `LOA;
                 setregsrc = 2'b10;
             end
             5'b11100: begin // SEQ Rd, Rs, Rt
@@ -207,14 +207,14 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
                 setregwrt = 1;
                 setbranch = 1;
                 setregsrc = 2'b11;
-                setaluop = ADD;
+                setaluop = `ADD;
                 setinvb = 1;
             end
             5'b11101: begin // SLT, Rd, Rs, Rt
                 setregdst = 2'b10;
                 setbsource = 2'b00;
                 setregwrt = 1;
-                setaluop = ADD;
+                setaluop = `ADD;
                 setbranch = 1;
                 setinvb = 1;
                 setregsrc = 2'b11;
@@ -223,7 +223,7 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
                 setregdst = 2'b10;
                 setbsource = 2'b00;
                 setregwrt = 1;
-                setaluop = ADD;
+                setaluop = `ADD;
                 setbranch = 1;
                 setinvb = 1;
                 setregsrc = 2'b11;
@@ -232,7 +232,7 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
                 setregdst = 2'b10;
                 setbsource = 2'b00;
                 setregwrt = 1;
-                setaluop = ADD;
+                setaluop = `ADD;
                 setbranch = 1;
                 setregsrc = 2'b11;
             end

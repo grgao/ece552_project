@@ -11,12 +11,12 @@ module ALUOperation(ALUOpr, instruction2bits, ALUOp, invA, invB);
     reg setInvB; // set invB
     always @(*) begin
         ALUOpVal = ALUOpr;
-        setInvA = 1'b0
-        setInvB = 1'b0
+        setInvA = 1'b0;
+        setInvB = 1'b0;
         case(ALUOpr)
-            ROS: ALUOpVal = (instruction2bits[0]) ? ((instruction2bits[1]) ?  SLR : SLL) : ((instruction2bits[1]) ?  ROR : ROL); // R-type
-            LOA: begin
-                ALUOpVal = (instruction2bits[1]) ? ((instruction2bits[0]) ?  AND : XOR) : ((instruction2bits[0]) ?  SUB : ADD);  // I-type
+            `ROS: ALUOpVal = (instruction2bits[0]) ? ((instruction2bits[1]) ?  `SRL : `SLL) : ((instruction2bits[1]) ?  `RRL : `RLL); // R-type
+            `LOA: begin
+                ALUOpVal = (instruction2bits[1]) ? ((instruction2bits[0]) ?  `AND : `XOR) : `ADD;  // I-type
                 setInvA = instruction2bits[0] & ~instruction2bits[1]; // SUB invert Rs
                 setInvB = instruction2bits[0] & instruction2bits[1]; // ANDN invert Rt
             end

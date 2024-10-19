@@ -36,9 +36,23 @@ module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, Zero, Ofl, CF);
     //invert B if needed
     assign actB = invB ? ~InB : InB;
 
-    for (int i = 0; i < OPERAND_WIDTH; i = i + 1) begin
-        assign btr[i] = InA[OPERAND_WIDTH - 1 - i];
-    end
+    //bit reverse
+    assign btr[0] = InA[15];
+    assign btr[1] = InA[14];
+    assign btr[2] = InA[13];
+    assign btr[3] = InA[12];
+    assign btr[4] = InA[11];
+    assign btr[5] = InA[10];
+    assign btr[6] = InA[9];
+    assign btr[7] = InA[8];
+    assign btr[8] = InA[7];
+    assign btr[9] = InA[6];
+    assign btr[10] = InA[5];
+    assign btr[11] = InA[4];
+    assign btr[12] = InA[3];
+    assign btr[13] = InA[2];
+    assign btr[14] = InA[1];
+    assign btr[15] = InA[0];
 
     shifter shift(.In(actA), .ShAmt(actB[3:0]), .Oper(Oper[1:0]), .Out(out_shft));
 

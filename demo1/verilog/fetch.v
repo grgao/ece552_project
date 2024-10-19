@@ -6,11 +6,11 @@
 */
 `default_nettype none
 module fetch (instruction, pc_in, pc_out, clk, rst);
-   input clk;
-   input rst;
-   input [15:0] pc_in; // current PC
-   output [15:0] pc_out; // next PC
-   output [15:0] instruction; // instruction to be fetched
+   input wire clk;
+   input wire rst;
+   input wire [15:0] pc_in; // current PC
+   output wire [15:0] pc_out; // next PC
+   output wire [15:0] instruction; // instruction to be fetched
 
    wire [15:0] pc_ff; // flip-floped current PC
 
