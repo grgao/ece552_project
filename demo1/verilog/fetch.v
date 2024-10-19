@@ -5,17 +5,18 @@
    Description     : This is the module for the overall fetch stage of the processor.
 */
 `default_nettype none
-module fetch (instruction, branch_pc, pc, clk, rst);
-   input [15:0] pc;
+module fetch (instruction, pc_in, pc_out, clk, rst);
    input clk;
    input rst;
-   output [15:0] instruction;
-   output [15:0] branch_pc;
-   wire [15:0] pc_out;
+   input [15:0] pc_in; // current PC
+   output [15:0] pc_out; // next PC
+   output [15:0] instruction; // instruction to be fetched
 
-   pc pc1(.clk(clk), .rst(rst), .pc_out(pc_out), .pc_in(pc));
-   cla_16b pcAdder(.sum(branch_pc), .c_out(), .a(pc_out), .b(16'h1), .c_in(1'b0));
-   memory2c instructionMem(.data_out(instruction), .addr(pc_out), .enable(1'b1), .wr(1'b0), .data_in(), .clk(clk), .rst(rst), .createdump(1'b0));
+   wire [15:0] pc_ff; // flip-floped current PC
+
+   cla_16b pcAdder(.sum(pc_out), .c_out(), .a(pc_ff), .b(16'h0002), .c_in(1'b0)); // 2 bytes per instruction
+   dff dff1[15:0](.d(pc_in), .clk(clk), .rst(rst), .q(pc_ff));
+   memory2c instructionMem(.data_out(instruction), .addr(pc_ff), .enable(1'b1), .wr(1'b0), .data_in(), .clk(clk), .rst(rst), .createdump(1'b0));
    
 endmodule
 `default_nettype wire

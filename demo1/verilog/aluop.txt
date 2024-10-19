@@ -1,6 +1,6 @@
 000:rll
 001:sll
-010:rr
+010:rrl
 011:srl
 100:add
 101:and
@@ -9,4 +9,6 @@
 
 //TODO: change 010(sra) to rotate right in alu
 //TODO: change mem write data to rd, not coming out of mux
+
+//Notes: changed branch to a 3 bit control signal
 

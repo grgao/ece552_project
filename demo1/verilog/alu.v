@@ -9,7 +9,7 @@
     of the operation, as well as drive the output signals Zero and Overflow
     (OFL).
 */
-module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, Zero, Ofl);
+module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, Zero, Ofl, CF);
     parameter OPERAND_WIDTH = 16;    
     parameter NUM_OPERATIONS = 4;
        
@@ -23,23 +23,28 @@ module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, Zero, Ofl);
     output [OPERAND_WIDTH -1:0] Out ; // Result of computation
     output                      Ofl ; // Signal if overflow occured
     output                      Zero; // Signal if Out is 0
+    output                      CF;  // Signal if carry out
 
     wire [OPERAND_WIDTH -1:0] actA;
     wire [OPERAND_WIDTH -1:0] actB; //actual inputs after inversion if needed
     wire [OPERAND_WIDTH -1:0] out_shft;
     wire [OPERAND_WIDTH -1:0]out_add;
-    wire [OPERAND_WIDTH -1:0]out1;
+    wire [OPERAND_WIDTH -1:0] btr; 
 
     //invert A if needed
     assign actA = invA ? ~InA : InA;
     //invert B if needed
     assign actB = invB ? ~InB : InB;
 
+    for (int i = 0; i < OPERAND_WIDTH; i = i + 1) begin
+        assign btr[i] = InA[OPERAND_WIDTH - 1 - i];
+    end
+
     shifter shift(.In(actA), .ShAmt(actB[3:0]), .Oper(Oper[1:0]), .Out(out_shft));
 
-    add add(.a(actA), .b(actB), .cin(Cin), .out(out_add), .sign(sign), .overflow(Ofl));
+    add add(.a(actA), .b(actB), .cin(Cin), .out(out_add), .sign(sign), .overflow(Ofl), .cout(CF));
 
-    assign Out = Oper[2] ? (Oper[1] ? (Oper[0] ? actA^actB : actA|actB) : (Oper[0] ? actA&actB : out_add)): out_shft;
+    assign Out = Oper[3] ? (Oper[0] ? InB : btr) : (Oper[2] ? (Oper[1] ? (Oper[0] ? actA^actB : actA|actB) : (Oper[0] ? actA&actB : out_add)): out_shft);
 
     assign Zero = (Out == 0);
 

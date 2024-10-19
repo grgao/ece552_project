@@ -6,7 +6,7 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
     output regwrt;
     output [1:0] bsource;
     output [2:0] branch;
-    output [2:0] aluop;
+    output [3:0] aluop;
     output alujmp;
     output invb;
     output inva;
@@ -14,14 +14,13 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
     output immsrc;
     output asource;
     output regsrc;
-    output dmp;
 
     reg [1:0]setregdst;
     reg set0ext;
     reg setregwrt;
     reg [1:0]setbsource;
     reg [2:0]setbranch;
-    reg [2:0]setaluop;
+    reg [3:0]setaluop;
     reg setalujmp;
     reg setinvb;
     reg setinva;
@@ -54,7 +53,7 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
         setregwrt = 0;
         setbsource = 2'b00;
         setbranch = 3'b000;
-        setaluop = 3'b000;
+        setaluop = 4'b0000;
         setalujmp = 0;
         setinvb = 0;
         setinva = 0;
@@ -188,18 +187,18 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
                 setregwrt = 1;
                 setaluop = BTR;
             end
-            5'b11010: begin // ROL, SLL, ROR, SRL : Rtype
+            5'b11010: begin // ROL, SLL, ROR, SRL : Rotate or shift
                 setregwrt = 1;
                 setregdst = 2'b10;
                 setbsource = 2'b00;
-                setaluop = OP;
+                setaluop = ROS;
                 setregsrc = 2'b10;
             end
-            5'b11011: begin //ADD Rd, Rs, Rt
+            5'b11011: begin //ADD, SUB, XOR, ANDN : Logical or arithmetic
                 setregdst = 2'b10;
                 setbsource = 2'b00;
                 setregwrt = 1;
-                setaluop = OP;
+                setaluop = LOA;
                 setregsrc = 2'b10;
             end
             5'b11100: begin // SEQ Rd, Rs, Rt

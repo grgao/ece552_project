@@ -8,7 +8,10 @@
 `define XOR 4'b0111
 `define BTR 4'b1000
 `define RTB 4'b1001 // return source b.
-`define OP 4'b1010
+// Note that ROS and LOA do not appear in ALU instantiation and will be determined as one of an actual operations
+`define ROS 4'b1010 // rotate or shift
+`define LOA 4'b1011 // logical or arithmetic
+
 
 // branch bits
 `define BEQZ 3'b001
