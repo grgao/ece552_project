@@ -205,7 +205,7 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
                 setregdst = 2'b10;
                 setbsource = 2'b00;
                 setregwrt = 1;
-                setbranch = 1;
+                setbranch = `SETRD;
                 setregsrc = 2'b11;
                 setaluop = `ADD;
                 setinvb = 1;
@@ -215,7 +215,7 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
                 setbsource = 2'b00;
                 setregwrt = 1;
                 setaluop = `ADD;
-                setbranch = 1;
+                setbranch = `SETRD;
                 setinvb = 1;
                 setregsrc = 2'b11;
             end
@@ -224,7 +224,7 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
                 setbsource = 2'b00;
                 setregwrt = 1;
                 setaluop = `ADD;
-                setbranch = 1;
+                setbranch = `SETRD;
                 setinvb = 1;
                 setregsrc = 2'b11;
             end
@@ -233,7 +233,7 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
                 setbsource = 2'b00;
                 setregwrt = 1;
                 setaluop = `ADD;
-                setbranch = 1;
+                setbranch = `SETRD;
                 setregsrc = 2'b11;
             end
             default: begin

@@ -33,12 +33,9 @@ QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
 Top level modules:
 	proc_hier_bench
 
-} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/mux8_1.v {2 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/mux8_1.v
+} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/mux8_1.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/mux8_1.v
 QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
 -- Compiling module mux8_1
-** Warning: /filespace/h/hlyu42/ece552/demo1/verilog/mux8_1.v(25): (vlog-2283) Extra semicolon in $unit (global) scope.
-** Warning: /filespace/h/hlyu42/ece552/demo1/verilog/mux8_1.v(25): (vlog-2284) Empty $unit scope found.
--- Compiling package mux8_1_v_unit
 
 Top level modules:
 	mux8_1
@@ -77,13 +74,6 @@ QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
 
 Top level modules:
 	regFile
-
-} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/instruction_decoder.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/instruction_decoder.v
-QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
--- Compiling module instruction_decoder
-
-Top level modules:
-	instruction_decoder
 
 } {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/add.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/add.v
 QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
@@ -182,9 +172,6 @@ QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
 
 Top level modules:
 	register
-
-} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/opcodes.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/opcodes.v
-QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
 
 } {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/mux4_1.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/mux4_1.v
 QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023

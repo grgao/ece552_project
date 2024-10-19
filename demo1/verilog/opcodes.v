@@ -19,3 +19,4 @@
 `define BLTZ 3'b011
 `define BGEZ 3'b100
 `define JUMP 3'b101
+`define SETRD 3'b110
