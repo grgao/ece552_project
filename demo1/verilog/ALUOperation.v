@@ -16,7 +16,7 @@ module ALUOperation(ALUOpr, instruction2bits, ALUOp, invA, invB);
         case(ALUOpr)
             `ROS: ALUOpVal = (instruction2bits[0]) ? ((instruction2bits[1]) ?  `SRL : `SLL) : ((instruction2bits[1]) ?  `RRL : `RLL); // R-type
             `LOA: begin
-                ALUOpVal = (instruction2bits[1]) ? ((instruction2bits[0]) ?  `AND : `XOR) : `ADD;  // I-type
+                ALUOpVal = (instruction2bits[1]) ? ((instruction2bits[0]) ?  `AND : `XOR) : `ADD;  // I-type, sub and add are both ADD operations
                 setInvA = instruction2bits[0] & ~instruction2bits[1]; // SUB invert Rs
                 setInvB = instruction2bits[0] & instruction2bits[1]; // ANDN invert Rt
             end

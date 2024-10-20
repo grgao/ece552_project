@@ -75,7 +75,19 @@ QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
 Top level modules:
 	regFile
 
-} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/add.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/add.v
+} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/instruction_decoder.v {0 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/instruction_decoder.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module instruction_decoder
+** Error: /filespace/h/hlyu42/ece552/demo1/verilog/instruction_decoder.v(209): (vlog-2163) Macro `SETRD is undefined.
+** Error: (vlog-13069) /filespace/h/hlyu42/ece552/demo1/verilog/instruction_decoder.v(209): near ";": syntax error, unexpected ';'.
+** Error: /filespace/h/hlyu42/ece552/demo1/verilog/instruction_decoder.v(219): (vlog-2163) Macro `SETRD is undefined.
+** Error: (vlog-13069) /filespace/h/hlyu42/ece552/demo1/verilog/instruction_decoder.v(219): near ";": syntax error, unexpected ';'.
+** Error: /filespace/h/hlyu42/ece552/demo1/verilog/instruction_decoder.v(228): (vlog-2163) Macro `SETRD is undefined.
+** Error: (vlog-13069) /filespace/h/hlyu42/ece552/demo1/verilog/instruction_decoder.v(228): near ";": syntax error, unexpected ';'.
+** Error: /filespace/h/hlyu42/ece552/demo1/verilog/instruction_decoder.v(237): (vlog-2163) Macro `SETRD is undefined.
+** Error: (vlog-13069) /filespace/h/hlyu42/ece552/demo1/verilog/instruction_decoder.v(237): near ";": syntax error, unexpected ';'.
+
+} {4.0 12.0} {}} /filespace/h/hlyu42/ece552/demo1/verilog/add.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/add.v
 QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
 -- Compiling module add
 
@@ -89,33 +101,12 @@ QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
 Top level modules:
 	fetch
 
-} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/xor2.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/xor2.v
+} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/clkrst.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/clkrst.v
 QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
--- Compiling module xor2
+-- Compiling module clkrst
 
 Top level modules:
-	xor2
-
-} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/proc_hier.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/proc_hier.v
-QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
--- Compiling module proc_hier
-
-Top level modules:
-	proc_hier
-
-} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/nand2.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/nand2.v
-QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
--- Compiling module nand2
-
-Top level modules:
-	nand2
-
-} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/left.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/left.v
-QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
--- Compiling module left
-
-Top level modules:
-	left
+	clkrst
 
 } {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/ALUOperation.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/ALUOperation.v
 QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
@@ -124,26 +115,33 @@ QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
 Top level modules:
 	ALUOperation
 
-} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/clkrst.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/clkrst.v
+} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/left.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/left.v
 QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
--- Compiling module clkrst
+-- Compiling module left
 
 Top level modules:
-	clkrst
+	left
 
-} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/execute.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/execute.v
+} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/nand2.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/nand2.v
 QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
--- Compiling module execute
+-- Compiling module nand2
 
 Top level modules:
-	execute
+	nand2
 
-} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/proc.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/proc.v
+} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/proc_hier.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/proc_hier.v
 QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
--- Compiling module proc
+-- Compiling module proc_hier
 
 Top level modules:
-	proc
+	proc_hier
+
+} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/xor2.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/xor2.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module xor2
+
+Top level modules:
+	xor2
 
 } {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/mux2_1.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/mux2_1.v
 QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
@@ -152,19 +150,12 @@ QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
 Top level modules:
 	mux2_1
 
-} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/decode.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/decode.v
+} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/proc.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/proc.v
 QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
--- Compiling module decode
+-- Compiling module proc
 
 Top level modules:
-	decode
-
-} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/shifter.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/shifter.v
-QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
--- Compiling module shifter
-
-Top level modules:
-	shifter
+	proc
 
 } {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/register.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/register.v
 QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
@@ -173,12 +164,19 @@ QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
 Top level modules:
 	register
 
-} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/mux4_1.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/mux4_1.v
+} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/shifter.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/shifter.v
 QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
--- Compiling module mux4_1
+-- Compiling module shifter
 
 Top level modules:
-	mux4_1
+	shifter
+
+} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/memory2c.syn.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/memory2c.syn.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module memory2c
+
+Top level modules:
+	memory2c
 
 } {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/memory2c.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/memory2c.v
 QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
@@ -187,12 +185,12 @@ QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
 Top level modules:
 	memory2c
 
-} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/memory2c.syn.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/memory2c.syn.v
+} {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/mux4_1.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/mux4_1.v
 QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
--- Compiling module memory2c
+-- Compiling module mux4_1
 
 Top level modules:
-	memory2c
+	mux4_1
 
 } {} {}} /filespace/h/hlyu42/ece552/demo1/verilog/regFile_bypass.v {1 {vlog -work work -vopt -stats=none /filespace/h/hlyu42/ece552/demo1/verilog/regFile_bypass.v
 QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023

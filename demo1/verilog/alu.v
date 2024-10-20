@@ -9,7 +9,7 @@
     of the operation, as well as drive the output signals Zero and Overflow
     (OFL).
 */
-module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, Zero, Ofl, CF);
+module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, Zero, Ofl, CF, SF);
     parameter OPERAND_WIDTH = 16;    
     parameter NUM_OPERATIONS = 4;
        
@@ -24,6 +24,7 @@ module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, Zero, Ofl, CF);
     output                      Ofl ; // Signal if overflow occured
     output                      Zero; // Signal if Out is 0
     output                      CF;  // Signal if carry out
+    output                      SF;  // Signal if result is negative
 
     wire [OPERAND_WIDTH -1:0] actA;
     wire [OPERAND_WIDTH -1:0] actB; //actual inputs after inversion if needed
@@ -59,7 +60,7 @@ module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, Zero, Ofl, CF);
     add add(.a(actA), .b(actB), .cin(Cin), .out(out_add), .sign(sign), .overflow(Ofl), .cout(CF));
 
     assign Out = Oper[3] ? (Oper[0] ? InB : btr) : (Oper[2] ? (Oper[1] ? (Oper[0] ? actA^actB : actA|actB) : (Oper[0] ? actA&actB : out_add)): out_shft);
-
+    assign SF = Out[OPERAND_WIDTH-1] & sign;
     assign Zero = (Out == 0);
 
 endmodule

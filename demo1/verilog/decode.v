@@ -5,7 +5,7 @@
    Description     : This is the module for the overall decode stage of the processor.
 */
 `default_nettype none
-module decode (instruction, writeback, opA, opB, out8bit, sign_extended_11bit, invb, inva, memwrt, immsrc, branch, regsrc, aluop, clk, rst);
+module decode (instruction, writeback, opA, opB, out8bit, sign_extended_11bit, invb, inva, memwrt, immsrc, branch, regsrc, aluop, sign, clk, rst);
    input wire [15:0] instruction;
    input wire [15:0] writeback;
    input wire clk;
@@ -21,6 +21,7 @@ module decode (instruction, writeback, opA, opB, out8bit, sign_extended_11bit, i
    output wire [2:0] branch;
    output wire regsrc;
    output wire [3:0] aluop;
+   output wire sign;
 
    wire [15:0] sign_extended_5bit;
    wire [15:0] sign_extended_8bit;
@@ -36,7 +37,7 @@ module decode (instruction, writeback, opA, opB, out8bit, sign_extended_11bit, i
    wire [1:0] bsource;
    wire alujmp;
    wire asource;
-   instruction_decoder decoder(.instruction(instruction[15:11]), .regdst(regdst), .sel0ext(sel0ext), .regwrt(regwrt), .bsource(bsource), .branch(branch), .aluop(aluop), .alujmp(alujmp), .invb(invb), .inva(inva), .memwrt(memwrt), .immsrc(immsrc), .asource(asource), .regsrc(regsrc));
+   instruction_decoder decoder(.instruction(instruction[15:11]), .regdst(regdst), .sel0ext(sel0ext), .regwrt(regwrt), .bsource(bsource), .branch(branch), .aluop(aluop), .alujmp(alujmp), .invb(invb), .inva(inva), .memwrt(memwrt), .immsrc(immsrc), .asource(asource), .regsrc(regsrc), .sign(sign), .dmp());
 
    // register file bypass module
    wire [15:0] writeReg;

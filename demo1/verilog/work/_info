@@ -150,22 +150,22 @@ R5
 R6
 vdecode
 2/filespace/h/hlyu42/ece552/demo1/verilog/decode.v
-!s110 1729379861
+Z9 !s110 1729385817
 !i10b 1
-!s100 5lg1;8[>aHT5eA29e6NU70
-Ike^UDdUWkAbIJ@mSO:;CF2
+!s100 h2BR:ZhlIN6ZP2@mYl=DS1
+IXN?T`P`ao?E3@hf6HoYK90
 R1
-w1729379857
+w1729381684
 8/filespace/h/hlyu42/ece552/demo1/verilog/decode.v
 F/filespace/h/hlyu42/ece552/demo1/verilog/decode.v
-!i122 27
+!i122 34
 L0 8 55
 R2
 R3
 r1
 !s85 0
 31
-!s108 1729379861.000000
+Z10 !s108 1729385817.000000
 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/decode.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/decode.v|
 !i113 0
@@ -196,22 +196,22 @@ R5
 R6
 vexecute
 2/filespace/h/hlyu42/ece552/demo1/verilog/execute.v
-!s110 1729379999
+R9
 !i10b 1
-!s100 a2mJn`dzS9ZiD;V>eE>=21
-I4J^Ohz8k7K[:DR^4=M9Q<2
+!s100 5BM;I>aYcoM[e_63RD?]B0
+IUo1TP7U`7G5X4ELCV;@2U0
 R1
-w1729379991
+w1729381501
 8/filespace/h/hlyu42/ece552/demo1/verilog/execute.v
 F/filespace/h/hlyu42/ece552/demo1/verilog/execute.v
-!i122 28
-L0 8 29
+!i122 35
+L0 8 24
 R2
 R3
 r1
 !s85 0
 31
-!s108 1729379999.000000
+R10
 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/execute.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/execute.v|
 !i113 0
@@ -242,7 +242,7 @@ R5
 R6
 vfullAdder_1b
 2/filespace/h/hlyu42/ece552/demo1/verilog/fullAdder_1b.v
-Z9 !s110 1729378660
+Z11 !s110 1729378660
 !i10b 1
 !s100 6:0obJohg_5^n[GLJmf;Y1
 IO;Oo8^?<U9c4Od^Ufm@CP3
@@ -257,7 +257,7 @@ R3
 r1
 !s85 0
 31
-Z10 !s108 1729378660.000000
+Z12 !s108 1729378660.000000
 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/fullAdder_1b.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/fullAdder_1b.v|
 !i113 0
@@ -289,7 +289,7 @@ R5
 R6
 vleft
 2/filespace/h/hlyu42/ece552/demo1/verilog/left.v
-R9
+R11
 !i10b 1
 !s100 jh@N3m`PD]OWcjK1?Okc31
 I8zX=@Y:]XFHf:G^IToPdb3
@@ -304,7 +304,7 @@ R3
 r1
 !s85 0
 31
-R10
+R12
 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/left.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/left.v|
 !i113 0
@@ -312,7 +312,7 @@ R5
 R6
 vmemory2c
 2/filespace/h/hlyu42/ece552/demo1/verilog/memory2c.v
-R9
+R11
 !i10b 1
 !s100 PelNY3`KSc3HL`Z[iMj4[3
 IKg?Ji?dF6DXG0fjTXDe8^3
@@ -327,7 +327,7 @@ R3
 r1
 !s85 0
 31
-R10
+R12
 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/memory2c.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/memory2c.v|
 !i113 0
@@ -335,7 +335,7 @@ R5
 R6
 vmux2_1
 2/filespace/h/hlyu42/ece552/demo1/verilog/mux2_1.v
-R9
+R11
 !i10b 1
 !s100 cFH0XY<NfO<6PNdMN0Dg10
 InijzMO`Thg]ni_b``JEhM3
@@ -350,7 +350,7 @@ R3
 r1
 !s85 0
 31
-R10
+R12
 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/mux2_1.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/mux2_1.v|
 !i113 0
@@ -358,7 +358,7 @@ R5
 R6
 vmux4_1
 2/filespace/h/hlyu42/ece552/demo1/verilog/mux4_1.v
-R9
+R11
 !i10b 1
 !s100 nDI6dnYXM:?5UFPl]Z8lE0
 IYad67;FX]k=<:Ogh63O@11
@@ -373,22 +373,22 @@ R3
 r1
 !s85 0
 31
-R10
+R12
 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/mux4_1.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/mux4_1.v|
 !i113 0
 R5
 R6
 vmux8_1
-Z11 2/filespace/h/hlyu42/ece552/demo1/verilog/mux8_1.v
+Z13 2/filespace/h/hlyu42/ece552/demo1/verilog/mux8_1.v
 !s110 1729380431
 !i10b 1
 !s100 zZi1M^E`iD^]YDA4XjIHK2
 I7llnPVMSR;IBGS]f@gh<43
 R1
 w1729380428
-Z12 8/filespace/h/hlyu42/ece552/demo1/verilog/mux8_1.v
-Z13 F/filespace/h/hlyu42/ece552/demo1/verilog/mux8_1.v
+Z14 8/filespace/h/hlyu42/ece552/demo1/verilog/mux8_1.v
+Z15 F/filespace/h/hlyu42/ece552/demo1/verilog/mux8_1.v
 !i122 33
 L0 1 25
 R2
@@ -397,15 +397,15 @@ r1
 !s85 0
 31
 !s108 1729380431.000000
-Z14 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/mux8_1.v|
-Z15 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/mux8_1.v|
+Z16 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/mux8_1.v|
+Z17 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/mux8_1.v|
 !i113 0
 R5
 R6
 Xmux8_1_v_unit
-R11
+R13
 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-R9
+R11
 Vk6hNd7K_^ZZ2Rh0<V>RLN3
 r1
 !s85 0
@@ -416,21 +416,21 @@ Ik6hNd7K_^ZZ2Rh0<V>RLN3
 S1
 R1
 R7
-R12
-R13
+R14
+R15
 !i122 11
 L0 25 0
 R3
 31
-R10
-R14
-R15
+R12
+R16
+R17
 !i113 0
 R5
 R6
 vnand2
 2/filespace/h/hlyu42/ece552/demo1/verilog/nand2.v
-R9
+R11
 !i10b 1
 !s100 PQLU1b2dKFzAXIo;U:CT50
 IUN9<3kXO52NY=:KQzU5`@3
@@ -439,13 +439,13 @@ R7
 8/filespace/h/hlyu42/ece552/demo1/verilog/nand2.v
 F/filespace/h/hlyu42/ece552/demo1/verilog/nand2.v
 !i122 12
-Z16 L0 7 5
+Z18 L0 7 5
 R2
 R3
 r1
 !s85 0
 31
-R10
+R12
 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/nand2.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/nand2.v|
 !i113 0
@@ -453,7 +453,7 @@ R5
 R6
 vpc
 2/filespace/h/hlyu42/ece552/demo1/verilog/pc.v
-R9
+R11
 !i10b 1
 !s100 b;eij2ASUlknX?OgC<TMK3
 ISg`9HUAh>@63keZfA55O?0
@@ -468,7 +468,7 @@ R3
 r1
 !s85 0
 31
-R10
+R12
 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/pc.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/pc.v|
 !i113 0
@@ -476,12 +476,12 @@ R5
 R6
 vproc
 2/filespace/h/hlyu42/ece552/demo1/verilog/proc.v
-R9
+R11
 !i10b 1
 !s100 9<HMhB_`oKdUPldb[WfM13
 IGPc]dHKdKB6QSj8z^fLJ`3
 R1
-Z17 w1729365250
+Z19 w1729365250
 8/filespace/h/hlyu42/ece552/demo1/verilog/proc.v
 F/filespace/h/hlyu42/ece552/demo1/verilog/proc.v
 !i122 14
@@ -491,7 +491,7 @@ R3
 r1
 !s85 0
 31
-R10
+R12
 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/proc.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/proc.v|
 !i113 0
@@ -499,12 +499,12 @@ R5
 R6
 vproc_hier
 2/filespace/h/hlyu42/ece552/demo1/verilog/proc_hier.v
-R9
+R11
 !i10b 1
 !s100 :2:adJ99Ykdh5OUKlOh=O1
 I<Lj=IFN5G3ePoO;A>c^a02
 R1
-R17
+R19
 8/filespace/h/hlyu42/ece552/demo1/verilog/proc_hier.v
 F/filespace/h/hlyu42/ece552/demo1/verilog/proc_hier.v
 !i122 15
@@ -514,7 +514,7 @@ R3
 r1
 !s85 0
 31
-R10
+R12
 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/proc_hier.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/proc_hier.v|
 !i113 0
@@ -522,12 +522,12 @@ R5
 R6
 vproc_hier_bench
 2/filespace/h/hlyu42/ece552/demo1/verilog/proc_hier_bench.v
-R9
+R11
 !i10b 1
 !s100 6kOJ[^VFb1Eo5fzI[21XQ3
 IWdLafd?444I<Zkge4i8bR3
 R1
-R17
+R19
 8/filespace/h/hlyu42/ece552/demo1/verilog/proc_hier_bench.v
 F/filespace/h/hlyu42/ece552/demo1/verilog/proc_hier_bench.v
 !i122 16
@@ -537,7 +537,7 @@ R3
 r1
 !s85 0
 31
-R10
+R12
 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/proc_hier_bench.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/proc_hier_bench.v|
 !i113 0
@@ -545,12 +545,12 @@ R5
 R6
 vregFile
 2/filespace/h/hlyu42/ece552/demo1/verilog/regFile.v
-Z18 !s110 1729378661
+Z20 !s110 1729378661
 !i10b 1
 !s100 kel:><5Y:e^;GlTzI@ei50
 IBQ`UI2n@R>^X@`9L=hP3^2
 R1
-R17
+R19
 8/filespace/h/hlyu42/ece552/demo1/verilog/regFile.v
 F/filespace/h/hlyu42/ece552/demo1/verilog/regFile.v
 !i122 17
@@ -560,7 +560,7 @@ R3
 r1
 !s85 0
 31
-R10
+R12
 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/regFile.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/regFile.v|
 !i113 0
@@ -569,12 +569,12 @@ R6
 nreg@file
 vregFile_bypass
 2/filespace/h/hlyu42/ece552/demo1/verilog/regFile_bypass.v
-R18
+R20
 !i10b 1
 !s100 YCS15VZfPli;h<efgFkQD2
 ISSfz^>FE`lG:zSfATA:_F2
 R1
-R17
+R19
 8/filespace/h/hlyu42/ece552/demo1/verilog/regFile_bypass.v
 F/filespace/h/hlyu42/ece552/demo1/verilog/regFile_bypass.v
 !i122 18
@@ -584,7 +584,7 @@ R3
 r1
 !s85 0
 31
-Z19 !s108 1729378661.000000
+Z21 !s108 1729378661.000000
 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/regFile_bypass.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/regFile_bypass.v|
 !i113 0
@@ -593,12 +593,12 @@ R6
 nreg@file_bypass
 vregister
 2/filespace/h/hlyu42/ece552/demo1/verilog/register.v
-R18
+R20
 !i10b 1
 !s100 f0`QVR9:1jm:@ZZ`dEC5i3
 INi4<DYH1iWO_k[_L?^eh`2
 R1
-R17
+R19
 8/filespace/h/hlyu42/ece552/demo1/verilog/register.v
 F/filespace/h/hlyu42/ece552/demo1/verilog/register.v
 !i122 19
@@ -608,7 +608,7 @@ R3
 r1
 !s85 0
 31
-R19
+R21
 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/register.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/register.v|
 !i113 0
@@ -616,7 +616,7 @@ R5
 R6
 vright
 2/filespace/h/hlyu42/ece552/demo1/verilog/right.v
-R18
+R20
 !i10b 1
 !s100 9`6ckIeF[8XzVZE=ZhgSB2
 IdDh_Cg][2R6f>6YZ<m]8;3
@@ -631,7 +631,7 @@ R3
 r1
 !s85 0
 31
-R19
+R21
 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/right.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/right.v|
 !i113 0
@@ -639,7 +639,7 @@ R5
 R6
 vshifter
 2/filespace/h/hlyu42/ece552/demo1/verilog/shifter.v
-R18
+R20
 !i10b 1
 !s100 OYiC?T=4:>c3hlI3G4Gg`3
 IXn;lQnEgXA==WGDnJY4b@3
@@ -654,7 +654,7 @@ R3
 r1
 !s85 0
 31
-R19
+R21
 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/shifter.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/shifter.v|
 !i113 0
@@ -662,12 +662,12 @@ R5
 R6
 vwb
 2/filespace/h/hlyu42/ece552/demo1/verilog/wb.v
-R18
+R20
 !i10b 1
 !s100 djhL86^j>VUPo8Dj23T^c3
 IXC^`FWRPUz:_h^dGDZ;2P3
 R1
-R17
+R19
 8/filespace/h/hlyu42/ece552/demo1/verilog/wb.v
 F/filespace/h/hlyu42/ece552/demo1/verilog/wb.v
 !i122 22
@@ -677,7 +677,7 @@ R3
 r1
 !s85 0
 31
-R19
+R21
 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/wb.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/wb.v|
 !i113 0
@@ -685,22 +685,22 @@ R5
 R6
 vxor2
 2/filespace/h/hlyu42/ece552/demo1/verilog/xor2.v
-R18
+R20
 !i10b 1
 !s100 0DonST9cQgZDA3mMR]8Un2
 I?Cl1@`S5JHY_L?_Yd?Udk2
 R1
-R17
+R19
 8/filespace/h/hlyu42/ece552/demo1/verilog/xor2.v
 F/filespace/h/hlyu42/ece552/demo1/verilog/xor2.v
 !i122 23
-R16
+R18
 R2
 R3
 r1
 !s85 0
 31
-R19
+R21
 !s107 /filespace/h/hlyu42/ece552/demo1/verilog/xor2.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/h/hlyu42/ece552/demo1/verilog/xor2.v|
 !i113 0
