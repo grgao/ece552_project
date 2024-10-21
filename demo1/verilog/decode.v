@@ -14,6 +14,8 @@ module decode (instruction, nextPC, asource, bsource, sign_extended_11bit, 8bit,
    output [15:0] sign_extended_11bit;
    output [15:0] 8bit;
 
+   // Instruction Decoder
+
    wire [15:0] sign_extended_5bit;
    wire [15:0] sign_extended_8bit;
    wire [15:0] zero_extended_5bit;

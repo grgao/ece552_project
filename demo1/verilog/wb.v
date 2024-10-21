@@ -5,9 +5,19 @@
    Description     : This is the module for the overall Write Back stage of the processor.
 */
 `default_nettype none
-module wb (/* TODO: Add appropriate inputs/outputs for your WB stage here*/);
-
+module wb (PC_in, PC_out, PC_reg, mem_data, alu_out, setrd, regsrc, wb_data);
+   input PC_in;
+   output PC_out;
+   input [15:0] PC_reg;
+   input [15:0] mem_data;
+   input [15:0] alu_out; 
+   input setrd;
+   input regsrc;
+   output wb_data;
    // TODO: Your code here
+
+   mux4_1 mux1(.in0(PC_reg), .in1(Mem_data), .in2(alu_out), in3(setrd), out(wb_data) .sel(regsrc));
+   assign PC_out = PC_in;
    
 endmodule
 `default_nettype wire

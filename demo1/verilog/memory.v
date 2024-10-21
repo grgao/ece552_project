@@ -6,8 +6,8 @@
                      processor.
 */
 `default_nettype none
-module memory (data_in, addr, enable, wr, clk, rst, createdump, data_out, PC_in,
-               jmpSource, brchcnd, alujmp, setrd_in, PC_reg, PC_out, setrd_out);
+module memory (data_in, addr, enable, wr, clk, rst, createdump, data_out, PC_in, regsrc_in,
+               jmpSource, brchcnd, alujmp, setrd_in, PC_reg, PC_out, setrd_out, alu_out, regsrc_out);
    
    // data mamory
    input [15:0] data_in;
@@ -22,13 +22,19 @@ module memory (data_in, addr, enable, wr, clk, rst, createdump, data_out, PC_in,
    // jmp
    input [15:0] PC_in;
    input [15:0] jmpSource;
-   input brchcnd;
-   input alujmp;
    input setrd_in;
    output [15:0] PC_reg;
    output [15:0] PC_out;
-   output setrd_out;
    output alu_out;
+   output setrd_out;
+
+   // Decode
+   input alujmp;
+   input brchcnd;
+   input regsrc_in;
+   output regsrc_out;
+
+
 
    // wires
    wire [15:0]jmpAddr;
