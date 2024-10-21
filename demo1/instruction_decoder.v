@@ -75,13 +75,21 @@ module instruction_decoder(instruction, regdst, 0ext, regwrt, bsource, branch, a
             end
             5'b00100: begin // J displacement
                 setimmsrc = 1;
-                
+                setbranch = JUMP;
             end
             5'b00101: begin // 
+                setbranch = JUMP;
             end
             5'b00110: begin
+                setimmsrc = 1;
+                setbranch = JUMP;
+                setregdst = 2'b11;
+                setregwrt = 1;
             end
             5'b00111: begin
+                setregdst = 2'b11;
+                setregwrt = 1;
+                setbranch = JUMP;
             end
             5'b01000: begin//ADDI Rd, Rs, immediate
                 setregdst = 2'b00;

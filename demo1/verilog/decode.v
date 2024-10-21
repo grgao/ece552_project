@@ -5,8 +5,10 @@
    Description     : This is the module for the overall decode stage of the processor.
 */
 `default_nettype none
-module decode (instruction, asource, bsource, 8bit, sign_extended_11bit);
+module decode (instruction, nextPC, asource, bsource, sign_extended_11bit, 8bit, aluOP,
+               regsrc, immsrc, memwrt, inva, invb, alujmp, aluopr, branch);
    input [15:0] instruction;
+   input [15:0] nextPC;
    output [15:0] asource;
    output [15:0] bsource;
    output [15:0] sign_extended_11bit;
