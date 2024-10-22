@@ -13,3 +13,5 @@
 //Notes: changed branch to a 3 bit control signal
 //Notes: added SEQ, SLT... to branch opcodes to know which flags to look for
 
+//Notes: connected whole design and not sure what sign signal for ALU is for.
+

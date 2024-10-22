@@ -9,7 +9,8 @@
     of the operation, as well as drive the output signals Zero and Overflow
     (OFL).
 */
-module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, Zero, Ofl, CF);
+`include "opcodes.v"
+module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, SF, ZF, OF, CF);
     parameter OPERAND_WIDTH = 16;    
     parameter NUM_OPERATIONS = 4;
        
@@ -21,8 +22,9 @@ module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, Zero, Ofl, CF);
     input                       invB; // Signal to invert B
     input                       sign; // Signal for signed operation
     output [OPERAND_WIDTH -1:0] Out ; // Result of computation
-    output                      Ofl ; // Signal if overflow occured
-    output                      Zero; // Signal if Out is 0
+    output                      SF ; // Signal result is negative
+    output                      OF ; // Signal if overflow occured
+    output                      ZF; // Signal if Out is 0
     output                      CF;  // Signal if carry out
 
     wire [OPERAND_WIDTH -1:0] actA;
@@ -30,6 +32,7 @@ module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, Zero, Ofl, CF);
     wire [OPERAND_WIDTH -1:0] out_shft;
     wire [OPERAND_WIDTH -1:0]out_add;
     wire [OPERAND_WIDTH -1:0] btr; 
+    reg [OPERAND_WIDTH -1:0] setOut;
 
     //invert A if needed
     assign actA = invA ? ~InA : InA;
@@ -56,10 +59,28 @@ module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, Zero, Ofl, CF);
 
     shifter shift(.In(actA), .ShAmt(actB[3:0]), .Oper(Oper[1:0]), .Out(out_shft));
 
-    add add(.a(actA), .b(actB), .cin(Cin), .out(out_add), .sign(sign), .overflow(Ofl), .cout(CF));
+    add add(.a(actA), .b(actB), .cin(Cin), .out(out_add), .sign(sign), .overflow(OF), .cout(CF));
 
-    assign Out = Oper[3] ? (Oper[0] ? InB : btr) : (Oper[2] ? (Oper[1] ? (Oper[0] ? actA^actB : actA|actB) : (Oper[0] ? actA&actB : out_add)): out_shft);
+    always @(*) begin
+        setOut = 0;
+        casex (Oper)
+            `RLL: setOut = out_shft; // shift or rotate
+            `SLL: setOut = out_shft; // shift or rotate
+            `RRL: setOut = out_shft; // shift or rotate
+            `SRL: setOut = out_shft; // shift or rotate
+            `ADD: setOut = out_add; // adder
+            `AND: setOut = actA & actB; // and
+            `OR: setOut = actA | actB; // or
+            `XOR: setOut = actA ^ actB; // xor
+            `BTR: setOut = btr; // bit reverse
+            `RTB: setOut = InB; // return source b
+            `RTA: setOut = InA; // return source a
+            default: setOut = 0;
+        endcase
+    end
 
-    assign Zero = (Out == 0);
+    assign Out = setOut;
+    assign ZF = (Out == 0);
+    assign SF = Out[OPERAND_WIDTH -1];
 
 endmodule

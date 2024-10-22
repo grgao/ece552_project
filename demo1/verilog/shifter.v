@@ -23,7 +23,7 @@ module shifter (In, ShAmt, Oper, Out);
     wire [OPERAND_WIDTH -1:0] right;
 
     left left1(.In(In), .Shft_Rot(Oper[0]), .ShAmt(ShAmt), .Out(left));
-    right right1(.In(In), .Shft_Rot(~Oper[0]), .ShAmt(ShAmt), .Out(right));
+    right right1(.In(In), .Shft_Rot(Oper[0]), .ShAmt(ShAmt), .Out(right));
 
     assign Out = Oper[1] ? right : left;
    

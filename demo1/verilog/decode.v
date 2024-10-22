@@ -5,7 +5,7 @@
    Description     : This is the module for the overall decode stage of the processor.
 */
 `default_nettype none
-module decode (instruction, writeback, opA, opB, out8bit, sign_extended_11bit, invb, inva, memwrt, immsrc, branch, regsrc, aluop, clk, rst);
+module decode (instruction, writeback, opA, opB, out8bit, sign_extended_11bit, invb, inva, memwrt, immsrc, branch, regsrc, aluop, clk, rst, alujmp, memdmp, mem_enable, read2Data, sign);
    input wire [15:0] instruction;
    input wire [15:0] writeback;
    input wire clk;
@@ -18,9 +18,14 @@ module decode (instruction, writeback, opA, opB, out8bit, sign_extended_11bit, i
    output wire inva;
    output wire memwrt;
    output wire immsrc;
-   output wire [2:0] branch;
+   output wire [3:0] branch;
    output wire regsrc;
    output wire [3:0] aluop;
+   output wire alujmp;
+   output wire memdmp;
+   output wire mem_enable;
+   output wire [15:0] read2Data;
+   output wire sign;
 
    wire [15:0] sign_extended_5bit;
    wire [15:0] sign_extended_8bit;
@@ -29,19 +34,19 @@ module decode (instruction, writeback, opA, opB, out8bit, sign_extended_11bit, i
    wire [15:0] out5bit;
    wire [15:0] rd2, rd1;
    wire sel0ext;
+   
 
    // instruction decoder module
    wire [1:0]regdst;
    wire regwrt;
    wire [1:0] bsource;
-   wire alujmp;
    wire asource;
-   instruction_decoder decoder(.instruction(instruction[15:11]), .regdst(regdst), .sel0ext(sel0ext), .regwrt(regwrt), .bsource(bsource), .branch(branch), .aluop(aluop), .alujmp(alujmp), .invb(invb), .inva(inva), .memwrt(memwrt), .immsrc(immsrc), .asource(asource), .regsrc(regsrc));
+   instruction_decoder decoder(.instruction(instruction[15:11]), .regdst(regdst), .sel0ext(sel0ext), .regwrt(regwrt), .bsource(bsource), .branch(branch), .aluop(aluop), .alujmp(alujmp), .invb(invb), .inva(inva), .memwrt(memwrt), .immsrc(immsrc), .asource(asource), .regsrc(regsrc), .dmp(memdmp), .mem_enable(mem_enable), .sign(sign));
 
    // register file bypass module
-   wire [15:0] writeReg;
+   wire [2:0] writeReg;
    mux4_1 #(.WIDTH(3)) writeReg_mux(.in0(instruction[7:5]), .in1(instruction[10:8]), .in2(instruction[4:2]), .in3(3'b111), .sel(regdst), .out(writeReg));
-   regFile_bypass rf(.read1Data(rd1), .read2Data(rd2), .err(), .clk(clk), .rst(rst), .read1RegSel(instruction[10:8]), .read2RegSel(instruction[7:5]), .writeRegSel(writeReg), .writeData(writeback), .writeEn(regwrt));
+   regFile_bypass regFile0(.read1Data(rd1), .read2Data(rd2), .err(), .clk(clk), .rst(rst), .read1RegSel(instruction[10:8]), .read2RegSel(instruction[7:5]), .writeRegSel(writeReg), .writeData(writeback), .writeEn(regwrt));
 
    // other muxes
    assign sign_extended_5bit = {{11{instruction[4]}}, instruction[4:0]};
@@ -55,6 +60,8 @@ module decode (instruction, writeback, opA, opB, out8bit, sign_extended_11bit, i
 
    mux4_1 bsource_mux(.in0(rd2), .in1(out5bit), .in2(out8bit), .in3(sign_extended_11bit), .sel(bsource), .out(opB));
    mux2_1 asource_mux(.in0(rd1), .in1({rd1[7:0], 8'h00}), .sel(asource), .out(opA));
+
+   assign read2Data = rd2;
 
 
 
