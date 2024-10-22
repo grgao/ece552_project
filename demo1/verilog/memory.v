@@ -6,8 +6,8 @@
                      processor.
 */
 `default_nettype none
-module memory (data_in, addr, enable, wr, clk, rst, createdump, data_out, PC_in, regsrc_in,
-               jmpSource, brchcnd, alujmp, setrd_in, PC_reg, PC_out, setrd_out, alu_out, regsrc_out);
+module memory (data_in, addr, wb_in, wb_out, clk, rst, data_out, PC_in, regsrc_in,
+               jmpSource, brchcnd, alujmp, setrd_in, PC_reg, PC_out, setrd_out, alu_out, regsrc_out, memwrt);
    
    // data mamory
    input [15:0] data_in;

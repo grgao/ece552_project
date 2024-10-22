@@ -5,7 +5,8 @@
    Description     : This is the module for the overall decode stage of the processor.
 */
 `default_nettype none
-module decode ();
+module decode (clk, rst, err, PC_in, instruction, wb_data, next_PC_in, PC_out, next_PC_out, srca, srcb, 8bits, 11bits, instruct,
+               regsrc, immsrc, memwrt, inva, invb, branch, alujmp, aluopr);
    input clk;
    input rst;
    output err;
