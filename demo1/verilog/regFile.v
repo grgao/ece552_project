@@ -28,7 +28,7 @@ module regFile (
 
    wire [7:0] write;
    wire [7:0] regwrite;
-   wire [15:0] reg0, reg1, reg2, reg3, reg4, reg5, reg6, reg7;
+   wire [WIDTH-1:0] reg0, reg1, reg2, reg3, reg4, reg5, reg6, reg7;
    wire err0, err1, err2, err3, err4, err5, err6, err7;
    wire errMux0, errMux1, errMux2;
 

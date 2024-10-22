@@ -10,7 +10,7 @@
     (OFL).
 */
 `include "opcodes.v"
-module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, SF, ZF, OF, CF);
+module alu (InA, InB, Cin, Oper, invA, invB, Out, SF, ZF, OF, CF);
     parameter OPERAND_WIDTH = 16;    
     parameter NUM_OPERATIONS = 4;
        
@@ -20,7 +20,6 @@ module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, SF, ZF, OF, CF);
     input  [NUM_OPERATIONS-1:0] Oper; // Operation type
     input                       invA; // Signal to invert A
     input                       invB; // Signal to invert B
-    input                       sign; // Signal for signed operation
     output [OPERAND_WIDTH -1:0] Out ; // Result of computation
     output                      SF ; // Signal result is negative
     output                      OF ; // Signal if overflow occured
@@ -59,7 +58,7 @@ module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, SF, ZF, OF, CF);
 
     shifter shift(.In(actA), .ShAmt(actB[3:0]), .Oper(Oper[1:0]), .Out(out_shft));
 
-    add add(.a(actA), .b(actB), .cin(Cin), .out(out_add), .sign(sign), .overflow(OF), .cout(CF));
+    add add(.a(actA), .b(actB), .cin(Cin), .out(out_add), .sign(1'b1), .overflow(OF), .cout(CF));
 
     always @(*) begin
         setOut = 0;

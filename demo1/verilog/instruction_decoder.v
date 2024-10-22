@@ -1,5 +1,5 @@
 `include "opcodes.v"
-module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch, aluop, alujmp, invb, inva, memwrt, immsrc, asource, regsrc, dmp, mem_enable, sign);
+module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch, aluop, alujmp, invb, inva, memwrt, immsrc, asource, regsrc, dmp, mem_enable);
     input [4:0] instruction;
     output [1:0]regdst;
     output sel0ext;
@@ -13,10 +13,9 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
     output memwrt;
     output immsrc;
     output asource;
-    output regsrc;
+    output [1:0]regsrc;
     output dmp;
     output mem_enable;
-    output sign;
 
     reg [1:0]setregdst;
     reg set0ext;
@@ -33,7 +32,6 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
     reg [1:0] setregsrc;
     reg setdmp;
     reg setmem_enable;
-    reg setsign;
 
     assign regdst = setregdst;
     assign sel0ext = set0ext;
@@ -50,7 +48,6 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
     assign regsrc = setregsrc;
     assign dmp = setdmp;
     assign mem_enable = setmem_enable;
-    assign sign = setsign;
 
     always @(*) begin
         //default values
@@ -68,7 +65,6 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
         setimmsrc = 0;
         setasource = 0;
         setregsrc = 0;
-        setsign = 1;
         setmem_enable = 0;
 
         casex(instruction)

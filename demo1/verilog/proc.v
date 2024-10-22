@@ -52,9 +52,8 @@ module proc (/*AUTOARG*/
    fetch fetch0(.instruction(instruction), .pc_in(pc_in), .pc_out(pc_out), .clk(clk), .rst(rst));
    decode decode0(.instruction(instruction), .writeback(writeback), .opA(opA), .opB(opB), .out8bit(out8bit), .sign_extended_11bit(sign_extended_11bit), .invb(invb), .inva(inva), .memwrt(memwrt), .immsrc(immsrc), .branch(branch), .regsrc(regsrc), .aluop(aluop), .clk(clk), .rst(rst), .mem_enable(mem_enable), .alujmp(alujmp), .memdmp(createdump), .read2Data(read2Data));
    execute execute0(.opA(opA), .opB(opB), .imm8bit(out8bit), .imm11bit(sign_extended_11bit), .aluop(aluop), .invb(invb), .inva(inva), .immsrc(immsrc), .branch(branch), .aluout(aluout), .setrd(setrd), .brchCnd(brchCnd), .PCaddersrc(PCaddersrc), .instruction2bits(instruction[1:0]));
-   memory memory0(.data_in(read2Data), .addr(aluout), .adderSrc(PCaddersrc), .inPC(pc_out), .brchCnd(brchCnd), .alujmp(alujmp), .enable(mem_enable), .wr(memwrt), .clk(clk), .rst(rst), .createdump(createdump), .data_out(mem_data_out), .outPC(pc_in));
+   memory memory0(.halt(createdump), .data_in(read2Data), .addr(aluout), .adderSrc(PCaddersrc), .inPC(pc_out), .brchCnd(brchCnd), .alujmp(alujmp), .enable(mem_enable), .wr(memwrt), .clk(clk), .rst(rst), .data_out(mem_data_out), .outPC(pc_in));
    wb wb0(.regSrc(regsrc), .inPC(pc_out), .readData(mem_data_out), .aluout(aluout), .setRd(setrd), .wbData(writeback));
-
    
 endmodule // proc
 `default_nettype wire

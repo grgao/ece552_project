@@ -6,7 +6,7 @@
                      processor.
 */
 `default_nettype none
-module memory (halt, data_in, addr, adderSrc, inPC, brchCnd, alujmp, enable, wr, clk, rst, createdump, data_out, brchCnd, outPC);
+module memory (halt, data_in, addr, adderSrc, inPC, brchCnd, alujmp, enable, wr, clk, rst, data_out, outPC);
     input wire [15:0] data_in;
     input wire [15:0] addr;
     input wire [15:0] adderSrc;
@@ -27,6 +27,6 @@ module memory (halt, data_in, addr, adderSrc, inPC, brchCnd, alujmp, enable, wr,
     cla_16b pcAdder(.sum(AddedPC), .c_out(), .a(inPC), .b(adderSrc), .c_in(1'b0));
     mux2_1 mux1(.in0(inPC), .in1(AddedPC), .sel(brchCnd), .out(brchPC));
     mux2_1 mux2(.in0(brchPC), .in1(addr), .sel(alujmp), .out(outPC));
-    memory2c memory(.data_in(data_in), .data_out(data_out), .addr(addr), .enable(enable), .wr(wr), .clk(clk), .rst(rst), .createdump(createdump));
+    memory2c memory(.data_in(data_in), .data_out(data_out), .addr(addr), .enable(enable), .wr(wr), .clk(clk), .rst(rst), .createdump(halt));
 endmodule
 `default_nettype wire
