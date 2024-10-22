@@ -11,9 +11,9 @@
 `define OP 4'b1010
 
 // branch bits
-`define BEQZ 3'b000
-`define BNEZ 3'b001
-`define BLTZ 3'b010
-`define BGEZ 3'b011
-`define JUMP 3'b100
-`define BSCO 3'b101
+`define BEQZ 3'b001
+`define BNEZ 3'b010
+`define BLTZ 3'b011
+`define BGEZ 3'b100
+`define JUMP 3'b101
+`define BSCO 3'b110

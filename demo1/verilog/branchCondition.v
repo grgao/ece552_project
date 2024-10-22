@@ -16,10 +16,10 @@ module branchCondition();
     assign setBEQZ = (branch === BEQZ) && ZF;
     assign setBNEZ = (branch === BNEZ) && ~ZF;
     assign setBLTZ = (branch === BLTZ) && SF;
-    assign setBGEZ = (branch === BEQZ) && (~SF | ZF);
-    assign setBSCO = (branch == BEQZ) && CF;
+    assign setBGEZ = (branch === BGEZ) && (~SF | ZF);
+    assign setBSCO = (branch == BSCO) && CF;
    
-    assign brchcnd = (branch == JUMP) | setBEQZ | setBNEZ | setBLTZ | setBGEZ;
-    assign setrd = setBEQZ | setBLTZ | setBGEZ | setBSCO;
+    assign brchcnd = (|branch) ? ((branch == JUMP) | setBEQZ | setBNEZ | setBLTZ | setBGEZ) : 0;
+    assign setrd = (|branch) ? (setBEQZ | setBLTZ | setBGEZ | setBSCO) : 0;
 
 endmodule
