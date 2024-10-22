@@ -12,12 +12,11 @@ module memory (data_in, addr, enable, wr, clk, rst, createdump, data_out, PC_in,
    // data mamory
    input [15:0] data_in;
    input [15:0] addr;
-   input enable;
-   input wr;
    input clk;
    input rst;
-   input createdump;
    output [15:0] data_out;
+   input wb_in;
+   output wb_out;
 
    // jmp
    input [15:0] PC_in;
@@ -33,6 +32,7 @@ module memory (data_in, addr, enable, wr, clk, rst, createdump, data_out, PC_in,
    input brchcnd;
    input regsrc_in;
    output regsrc_out;
+   input memwrt;
 
 
 
@@ -40,14 +40,17 @@ module memory (data_in, addr, enable, wr, clk, rst, createdump, data_out, PC_in,
    wire [15:0]jmpAddr;
    wire [15:0]branchMux;
 
-   add add1(.a(PC_in), .b(jmpSource), .out(jmpAddr), .cin(1'b0), .sign(), .overflow() .cout());
+   add add1(.a(PC_in), .b(jmpSource), .out(jmpAddr), .cin(1'b0), .sign(1'b1), .overflow() .cout());
    mux2_1 mux1(.in0(PC_in), .in1(jmpAddr), .sel(brchcnd), .out(branchMux));
    mux2_1 mux2(.in0(branchMux), in1(addr), .sel(alujmp), .out(PC_out));
-   memory2c memory(.data_in(data_in), .data_out(data_out), .addr(addr), .enable(enable), .wr(wr), .clk(clk), .rst(rst), .createdump(createdump));
+   memory2c memory(.data_in(data_in), .data_out(data_out), .addr(addr), .enable(1'b1), .wr(memwrt), .clk(clk), .rst(rst), .createdump(1'b1));
 
    assign PC_reg = PC_in;
    assign setrd_out = setrd_in;
    assign alu_out = addr;
+   assign wb_out = wb_in;
+   assign regsrc_out = regsrc_in;
+
 
 endmodule
 `default_nettype wire

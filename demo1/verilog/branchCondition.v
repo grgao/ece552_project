@@ -1,4 +1,4 @@
-module branchCondition();
+module branchCondition(branch, SF, ZF, OF, CF, brchcnd, setrd);
     input [2:0] branch;
     input SF;
     input ZF;
