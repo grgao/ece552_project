@@ -8,7 +8,8 @@
 module execute (PC_in, eightBits, elevenBits, asrc, bsrc, next_PC_in, instruct, wb_in, 
 regsrc, immsrc, memwrt, inva, invb, branch, alujmp, aluopr, PC_out, jmpSource, 
 alu_out, srcb_out, next_PC_out, wb_out, setrd, regsrc_out, alujmp_out, brchcnd, memwrt_out, dmp, dmp_out, memread, memread_out);
-   
+    `include "opcodes.v"  
+
    //////////// INPUTS /////////////
    // wires
    input wire [15:0]PC_in;
@@ -26,7 +27,7 @@ alu_out, srcb_out, next_PC_out, wb_out, setrd, regsrc_out, alujmp_out, brchcnd, 
    input wire memwrt;
    input wire inva;
    input wire invb;
-   input wire [2:0]branch;
+   input wire [3:0]branch;
    input wire alujmp;
    input wire [3:0]aluopr;
    input wire dmp;
@@ -52,10 +53,10 @@ alu_out, srcb_out, next_PC_out, wb_out, setrd, regsrc_out, alujmp_out, brchcnd, 
 
    wire SF, ZF, OF, CF;
 
-   alu alu1(.InA(asrc), .InB(bsrc), .Cin(inva | invb), .Oper(aluopr), .invA(inva), .invB(invb), 
+   alu alu1(.InA(asrc), .InB(bsrc), .Cin(inva | invb | (instruct == `SUB)), .Oper(aluopr), .invA(inva | (instruct == `SUB)), .invB(invb), 
             .sign(1'b1), .Out(alu_out), .instruct(instruct), .ZF(ZF), .OF(OF), .SF(SF), .CF(CF));
 
-   branchCondition bc1(.branch(branch), .SF(SF), .ZF(ZF), .OF(OF), .CF(CF), .brchcnd(brchcnd), .setrd(setrd));
+   branchCondition bc2(.branch(branch), .SF(SF), .ZF(ZF), .OF(OF), .CF(CF), .brchcnd(brchcnd), .setrd(setrd));
 
    mux2_1 mux1(.in0(eightBits), .in1(elevenBits), .sel(immsrc), .out(jmpSource));
 

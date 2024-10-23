@@ -125,7 +125,7 @@ module proc_hier_bench();
    // Edit the example below. You must change the signal
    // names on the right hand side
     
-   assign PC = DUT.p0.f.pc;
+   assign PC = DUT.p0.f.pc_out;
    assign Inst = DUT.p0.f.instruction;
    
    assign RegWrite = DUT.p0.d.registerFile.writeEn;

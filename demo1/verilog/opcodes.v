@@ -3,17 +3,21 @@
 `define RRL 4'b0010
 `define SRL 4'b0011
 `define ADD 4'b0100
-`define AND 4'b0101
-`define OR  4'b0110
-`define XOR 4'b0111
+`define ANDN 4'b0111
+`define SUB 4'b0101
+`define XOR 4'b0110
 `define BTR 4'b1000
 `define RTB 4'b1001 // return source b.
 `define OP 4'b1010
-
+`define OPSHFT 4'b1011
+`define RTA 4'b1100
 // branch bits
-`define BEQZ 3'b001
-`define BNEZ 3'b010
-`define BLTZ 3'b011
-`define BGEZ 3'b100
-`define JUMP 3'b101
-`define BSCO 3'b110
+`define BEQZ 4'b001
+`define BNEZ 4'b010
+`define BLTZ 4'b011
+`define BGEZ 4'b100
+`define JUMP 4'b101
+`define SEQ 4'b1000
+`define SLT 4'b1001
+`define SLE 4'b1010
+`define SCO 4'b1011

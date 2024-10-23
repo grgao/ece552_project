@@ -31,7 +31,7 @@ module decode (clk, rst, err, PC_in, instruction, wb_data, next_PC_in, PC_out, n
    output wire memwrt;
    output wire inva;
    output wire invb;
-   output wire [2:0]branch;
+   output wire [3:0]branch;
    output wire alujmp;
    output wire [3:0]aluopr;
    output wire dmp;

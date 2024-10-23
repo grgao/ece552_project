@@ -6,7 +6,7 @@ module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, al
     output wire ext;
     output wire regwrt;
     output wire [1:0] bsource;
-    output wire [2:0] branch;
+    output wire [3:0] branch;
     output wire [3:0] aluop;
     output wire alujmp;
     output wire invb;
@@ -22,8 +22,8 @@ module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, al
     reg set0ext;
     reg setregwrt;
     reg [1:0]setbsource;
-    reg [2:0]setbranch;
-    reg [2:0]setaluop;
+    reg [3:0]setbranch;
+    reg [3:0]setaluop;
     reg setalujmp;
     reg setinvb;
     reg setinva;
@@ -110,6 +110,7 @@ module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, al
                 setbsource = 2'b01;
                 setregwrt = 1;
                 setinva = 1;
+                setregsrc = 2'b10;
                 setaluop = `ADD;
             end
             5'b01010: begin//XORI Rd, Rs, immediate 
@@ -117,6 +118,7 @@ module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, al
                 setbsource = 2'b01;
                 set0ext = 1;
                 setregwrt = 1;
+                setregsrc = 2'b10;
                 setaluop = `XOR;
             end
             5'b01011: begin//ANDNI Rd, Rs, immediate
@@ -124,21 +126,25 @@ module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, al
                 setbsource = 2'b01;
                 set0ext = 1;
                 setregwrt = 1;
-                setinvb = 1; 
-                setaluop = `AND;
+                setregsrc = 2'b10;
+                setaluop = `ANDN;
             end
             5'b01100: begin // BEQZ Rs, immediate
                 setbranch = `BEQZ;
+                setaluop = `RTA;
             end
             5'b01101: begin // BNEZ Rs, immediate
                 setbranch = `BNEZ;
+                setaluop = `RTA;
             end
             5'b01110: begin // BGEZ Rs, immediate
                 setbranch = `BGEZ;
+                setaluop = `RTA;
             end
             5'b01111: begin // BLTZ Rs, immediate
                 setbranch = `BLTZ;
-            end
+                 setaluop = `RTA;
+           end
             5'b10000: begin //ST Rd, Rs, immediate
                 setbsource = 2'b01;
                 setmemwrt = 1;
@@ -154,7 +160,7 @@ module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, al
             end
             5'b10010: begin // SLBI Rs, immediate
                 setasource = 1;
-                setaluop = `OR;
+                setaluop = `ADD;
                 set0ext = 1;
                 setbsource = 2'b10;
                 setregwrt = 1;
@@ -208,7 +214,7 @@ module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, al
                 setregwrt = 1;
                 setregdst = 2'b10;
                 setbsource = 2'b00;
-                setaluop = `OP;
+                setaluop = `OPSHFT;
                 setregsrc = 2'b10;
             end
             5'b11011: begin //ADD Rd, Rs, Rt
@@ -224,7 +230,7 @@ module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, al
                 setregwrt = 1;
                 setbranch = `BEQZ;
                 setregsrc = 2'b11;
-                setaluop = `ADD;
+                setaluop = `SEQ;
                 setinvb = 1;
             end
             5'b11101: begin // SLT, Rd, Rs, Rt
@@ -232,7 +238,7 @@ module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, al
                 setbsource = 2'b00;
                 setregwrt = 1;
                 setaluop = `ADD;
-                setbranch = `BLTZ;
+                setbranch = `SLT;
                 setinvb = 1;
                 setregsrc = 2'b11;
             end
@@ -241,8 +247,8 @@ module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, al
                 setbsource = 2'b00;
                 setregwrt = 1;
                 setaluop = `ADD;
-                setbranch = `BGEZ;
-                setinva = 1;
+                setbranch = `SLE;
+                setinvb = 1;
                 setregsrc = 2'b11;
             end
             5'b11111: begin // SCO Rd, Rs, Rt
@@ -250,7 +256,7 @@ module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, al
                 setbsource = 2'b00;
                 setregwrt = 1;
                 setaluop = `ADD;
-                setbranch = `BSCO;
+                setbranch = `SCO;
                 setregsrc = 2'b11;
             end
             default: begin
