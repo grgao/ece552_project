@@ -32,7 +32,7 @@ module proc (/*AUTOARG*/
    wire err1, regsrc, immsrc, memwrt, inva, invb, alujmp, memread, dmp;
    wire [3:0] aluopr;
    wire [2:0]branch;
-   assign err = 0;
+   assign err = err1;
    decode d(.clk(clk), .rst(rst), .err(err1), .PC_in(branch_pc), .instruction(instruction_f_d), .wb_data(wbdata_x_d),
             .next_PC_in(nextPC_x_d), .PC_out(pc_d_x), .next_PC_out(pc_d_f), .srca(srca), .srcb(srcb), .eightBits(eightBits),
             .elevenBits(elevenBits), .instruct(instruct), .regsrc(regsrc), .immsrc(immsrc), .memwrt(memwrt), .inva(inva), 
