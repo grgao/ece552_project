@@ -1,0 +1,195 @@
+$date
+	Mon Oct 21 23:56:18 2024
+$end
+$version
+	QuestaSim Version 2023.2_1
+$end
+$timescale
+	1ns
+$end
+
+$scope module proc_hier_bench $end
+
+$scope module DUT $end
+
+$scope module c0 $end
+$upscope $end
+
+$scope module p0 $end
+$var wire 1 ! memwrt $end
+$var wire 1 " aluout [15] $end
+$var wire 1 # aluout [14] $end
+$var wire 1 $ aluout [13] $end
+$var wire 1 % aluout [12] $end
+$var wire 1 & aluout [11] $end
+$var wire 1 ' aluout [10] $end
+$var wire 1 ( aluout [9] $end
+$var wire 1 ) aluout [8] $end
+$var wire 1 * aluout [7] $end
+$var wire 1 + aluout [6] $end
+$var wire 1 , aluout [5] $end
+$var wire 1 - aluout [4] $end
+$var wire 1 . aluout [3] $end
+$var wire 1 / aluout [2] $end
+$var wire 1 0 aluout [1] $end
+$var wire 1 1 aluout [0] $end
+$var wire 1 2 mem_enable $end
+$var wire 1 3 read2Data [15] $end
+$var wire 1 4 read2Data [14] $end
+$var wire 1 5 read2Data [13] $end
+$var wire 1 6 read2Data [12] $end
+$var wire 1 7 read2Data [11] $end
+$var wire 1 8 read2Data [10] $end
+$var wire 1 9 read2Data [9] $end
+$var wire 1 : read2Data [8] $end
+$var wire 1 ; read2Data [7] $end
+$var wire 1 < read2Data [6] $end
+$var wire 1 = read2Data [5] $end
+$var wire 1 > read2Data [4] $end
+$var wire 1 ? read2Data [3] $end
+$var wire 1 @ read2Data [2] $end
+$var wire 1 A read2Data [1] $end
+$var wire 1 B read2Data [0] $end
+
+$scope module fetch0 $end
+
+$scope module instructionMem $end
+$upscope $end
+$upscope $end
+
+$scope module memory0 $end
+$var wire 1 3 data_in [15] $end
+$var wire 1 4 data_in [14] $end
+$var wire 1 5 data_in [13] $end
+$var wire 1 6 data_in [12] $end
+$var wire 1 7 data_in [11] $end
+$var wire 1 8 data_in [10] $end
+$var wire 1 9 data_in [9] $end
+$var wire 1 : data_in [8] $end
+$var wire 1 ; data_in [7] $end
+$var wire 1 < data_in [6] $end
+$var wire 1 = data_in [5] $end
+$var wire 1 > data_in [4] $end
+$var wire 1 ? data_in [3] $end
+$var wire 1 @ data_in [2] $end
+$var wire 1 A data_in [1] $end
+$var wire 1 B data_in [0] $end
+$var wire 1 " addr [15] $end
+$var wire 1 # addr [14] $end
+$var wire 1 $ addr [13] $end
+$var wire 1 % addr [12] $end
+$var wire 1 & addr [11] $end
+$var wire 1 ' addr [10] $end
+$var wire 1 ( addr [9] $end
+$var wire 1 ) addr [8] $end
+$var wire 1 * addr [7] $end
+$var wire 1 + addr [6] $end
+$var wire 1 , addr [5] $end
+$var wire 1 - addr [4] $end
+$var wire 1 . addr [3] $end
+$var wire 1 / addr [2] $end
+$var wire 1 0 addr [1] $end
+$var wire 1 1 addr [0] $end
+$var wire 1 2 enable $end
+$var wire 1 ! wr $end
+$var wire 1 C halt $end
+
+$scope module memory $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x!
+x1
+x0
+x/
+x.
+x-
+x,
+x+
+x*
+x)
+x(
+x'
+x&
+x%
+x$
+x#
+x"
+x2
+xB
+xA
+x@
+x?
+x>
+x=
+x<
+x;
+x:
+x9
+x8
+x7
+x6
+x5
+x4
+x3
+zC
+$end
+#1
+0!
+02
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+#301
+x/
+#401
+x@
+x0
+0/
+#501
+x/
+#601
+xA
+x.
+#701
+x?
+0A
+0@
+0?
+00
+0/
+0.
