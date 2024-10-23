@@ -7,7 +7,10 @@ module branchCondition (flags, branch, brchCnd, setRd);
 
     wire SF, ZF, OF, CF;
     reg setSetRd, setBrchCnd;
-    assign {SF, ZF, OF, CF} = flags;
+    assign SF = flags[3];
+    assign ZF = flags[2];
+    assign OF = flags[1];
+    assign CF = flags[0];
     assign brchCnd = setBrchCnd;
     assign setRd = setSetRd;
 
@@ -18,6 +21,7 @@ module branchCondition (flags, branch, brchCnd, setRd);
             `BEQZ: setBrchCnd = ZF; // BEQZ
             `BNEZ: setBrchCnd = ~ZF; // BNEZ
             `BLTZ: setBrchCnd = SF; // BLTZ
+            `BGEZ: setBrchCnd = ~SF; // BGEZ
             `JUMP: setBrchCnd = 1; // JUMP
             `SEQ: setSetRd = ZF;// SEQ
             `SLT: setSetRd = SF; // SLT

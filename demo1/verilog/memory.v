@@ -6,7 +6,7 @@
                      processor.
 */
 `default_nettype none
-module memory (halt, data_in, addr, adderSrc, inPC, brchCnd, alujmp, enable, wr, clk, rst, createdump, data_out, brchCnd, outPC);
+module memory (halt, data_in, addr, adderSrc, inPC, brchCnd, alujmp, enable, wr, clk, rst, createdump, data_out, outPC);
     input wire [15:0] data_in;
     input wire [15:0] addr;
     input wire [15:0] adderSrc;

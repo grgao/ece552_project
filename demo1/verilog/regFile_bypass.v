@@ -10,7 +10,7 @@ module regFile_bypass (
                        read1Data, read2Data, err,
                        // Inputs
                        clk, rst, read1RegSel, read2RegSel, writeRegSel, writeData, writeEn
-                       );
+                       );  
    input        clk, rst;
    input [2:0]  read1RegSel;
    input [2:0]  read2RegSel;
@@ -22,14 +22,17 @@ module regFile_bypass (
    output [15:0] read2Data;
    output        err;
 
-   wire [15:0] regRead1Data, regRead2Data;
-   wire regErr;
-
    /* YOUR CODE HERE */
-   regFile rf (.clk(clk), .rst(rst), .read1RegSel(read1RegSel), .read2RegSel(read2RegSel), .writeRegSel(writeRegSel), .writeData(writeData), .writeEn(writeEn), .read1Data(regRead1Data), .read2Data(regRead2Data), .err(regErr));
+   wire [15:0] read1DataIn, read2DataIn, writeDataff;
+   wire writeEnff;
+   wire [2:0] writeRegSelff, read1RegSelff, read2RegSelff;
+   assign read1Data = (((writeEn ^ writeEnff) == 1'b1) && (writeRegSelff == read1RegSelff)) ? writeDataff : read1DataIn;
+   assign read2Data = (((writeEn ^ writeEnff) == 1'b1) && (writeRegSelff == read2RegSelff)) ? writeDataff : read2DataIn;
+   register register(.in(writeData), .out(writeDataff), .clk(clk), .rst(rst));
+   register #(.WIDTH(1)) register1(.in(writeEn), .out(writeEnff), .clk(clk), .rst(rst));
+   register #(.WIDTH(3)) register2(.in(writeRegSel), .out(writeRegSelff), .clk(clk), .rst(rst));
+   register #(.WIDTH(3)) register3(.in(read1RegSel), .out(read1RegSelff), .clk(clk), .rst(rst));
+   register #(.WIDTH(3)) register4(.in(read2RegSel), .out(read2RegSelff), .clk(clk), .rst(rst));
+   regFile regfile(.read1Data(read1DataIn), .read2Data(read2DataIn), .err(err), .clk(clk), .rst(rst), .read1RegSel(read1RegSel), .read2RegSel(read2RegSel), .writeRegSel(writeRegSel), .writeData(writeData), .writeEn(writeEn));
 
-   assign read1Data = (writeRegSel == read1RegSel) & writeEn ? writeData : regRead1Data;
-   assign read2Data = (writeRegSel == read2RegSel) & writeEn ? writeData : regRead2Data;
-
-   assign err = ((^({clk, rst, read1RegSel, read2RegSel, writeRegSel, writeData, writeEn, regRead1Data, regRead2Data}))===1'bx) | regErr;
 endmodule

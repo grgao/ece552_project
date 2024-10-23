@@ -1,0 +1,3 @@
+wsrun.pl -list simple.txt proc_hier_bench verilog/proc_hier_bench.v verilog/*.v
+
+wsrun.pl -prog 

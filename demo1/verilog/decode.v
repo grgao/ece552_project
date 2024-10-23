@@ -5,7 +5,7 @@
    Description     : This is the module for the overall decode stage of the processor.
 */
 `default_nettype none
-module decode (instruction, writeback, opA, opB, out8bit, sign_extended_11bit, invb, inva, memwrt, immsrc, branch, regsrc, aluop, clk, rst, alujmp, memdmp, mem_enable, read2Data, sign);
+module decode (instruction, writeback, opA, opB, out8bit, sign_extended_11bit, invb, inva, memwrt, immsrc, branch, regsrc, aluop, clk, rst, alujmp, memdmp, mem_enable, read2Data, sign, halt);
    input wire [15:0] instruction;
    input wire [15:0] writeback;
    input wire clk;
@@ -19,13 +19,14 @@ module decode (instruction, writeback, opA, opB, out8bit, sign_extended_11bit, i
    output wire memwrt;
    output wire immsrc;
    output wire [3:0] branch;
-   output wire regsrc;
+   output wire [1:0] regsrc;
    output wire [3:0] aluop;
    output wire alujmp;
    output wire memdmp;
    output wire mem_enable;
    output wire [15:0] read2Data;
    output wire sign;
+   output wire halt;
 
    wire [15:0] sign_extended_5bit;
    wire [15:0] sign_extended_8bit;
@@ -41,7 +42,7 @@ module decode (instruction, writeback, opA, opB, out8bit, sign_extended_11bit, i
    wire regwrt;
    wire [1:0] bsource;
    wire asource;
-   instruction_decoder decoder(.instruction(instruction[15:11]), .regdst(regdst), .sel0ext(sel0ext), .regwrt(regwrt), .bsource(bsource), .branch(branch), .aluop(aluop), .alujmp(alujmp), .invb(invb), .inva(inva), .memwrt(memwrt), .immsrc(immsrc), .asource(asource), .regsrc(regsrc), .dmp(memdmp), .mem_enable(mem_enable), .sign(sign));
+   instruction_decoder decoder(.instruction(instruction[15:11]), .regdst(regdst), .sel0ext(sel0ext), .regwrt(regwrt), .bsource(bsource), .branch(branch), .aluop(aluop), .alujmp(alujmp), .invb(invb), .inva(inva), .memwrt(memwrt), .immsrc(immsrc), .asource(asource), .regsrc(regsrc), .dmp(memdmp), .mem_enable(mem_enable), .sign(sign), .halt(halt));
 
    // register file bypass module
    wire [2:0] writeReg;

@@ -1,0 +1,8 @@
+          // Original test: ./benson/hw4/problem6/andni_4.asm
+          // Author: benson
+          // Test source code follows
+          
+          
+0000 c17e lbi r1, 126
+0002 5955 andni r2, r1, 21
+0004 0000 halt

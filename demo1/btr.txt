@@ -1,0 +1,9 @@
+/home/lyuh/ece552/simple/btr_0.asm
+/home/lyuh/ece552/simple/btr_1.asm
+/home/lyuh/ece552/simple/btr_2.asm
+/home/lyuh/ece552/simple/btr_3.asm
+/home/lyuh/ece552/simple/btr_4.asm
+/home/lyuh/ece552/simple/btr_5.asm
+/home/lyuh/ece552/simple/btr_6.asm
+/home/lyuh/ece552/simple/btr_7.asm
+/home/lyuh/ece552/simple/btr_8.asm

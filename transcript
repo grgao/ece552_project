@@ -1,0 +1,7 @@
+# vsim -c ../simple/add_0.asm -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 16:52:54 on Oct 22,2024
+# ** Error (suppressible): (vsim-19) Failed to access library '../simple/add_0' at "../simple/add_0".
+# No such file or directory. (errno = ENOENT)
+# Error loading design
+# End time: 16:52:54 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0

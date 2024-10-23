@@ -1,5 +1,5 @@
 `include "opcodes.v"
-module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch, aluop, alujmp, invb, inva, memwrt, immsrc, asource, regsrc, dmp, mem_enable, sign);
+module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch, aluop, alujmp, invb, inva, memwrt, immsrc, asource, regsrc, dmp, mem_enable, sign, halt);
     input [4:0] instruction;
     output [1:0]regdst;
     output sel0ext;
@@ -13,10 +13,11 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
     output memwrt;
     output immsrc;
     output asource;
-    output regsrc;
+    output [1:0] regsrc;
     output dmp;
     output mem_enable;
     output sign;
+    output halt;
 
     reg [1:0]setregdst;
     reg set0ext;
@@ -34,6 +35,7 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
     reg setdmp;
     reg setmem_enable;
     reg setsign;
+    reg sethalt;
 
     assign regdst = setregdst;
     assign sel0ext = set0ext;
@@ -51,6 +53,7 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
     assign dmp = setdmp;
     assign mem_enable = setmem_enable;
     assign sign = setsign;
+    assign halt = sethalt;
 
     always @(*) begin
         //default values
@@ -70,10 +73,12 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
         setregsrc = 0;
         setsign = 1;
         setmem_enable = 0;
+        sethalt = 0;
 
         casex(instruction)
             5'b00000: begin //halt
                 setdmp = 1;
+                sethalt = 1;
             end
             5'b00001: begin//Nop
             end
@@ -87,6 +92,8 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
             end
             5'b00101: begin // JR, Rs, immediate
                 setbranch = `JUMP;
+                setalujmp = 1;
+                setbsource = 2'b10;
             end
             5'b00110: begin // JAL displacement
                 setregdst = 2'b11; // write data to R7
@@ -138,11 +145,11 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
                 setbranch = `BNEZ;
                 setaluop = `RTA; // check the sign of Rs only
             end
-            5'b01110: begin // BGEZ Rs, immediate
+            5'b01111: begin // BGEZ Rs, immediate
                 setbranch = `BGEZ;
                 setaluop = `RTA; // check the sign of Rs only
             end
-            5'b01111: begin // BLTZ Rs, immediate
+            5'b01110: begin // BLTZ Rs, immediate
                 setbranch = `BLTZ;
                 setaluop = `RTA; // check the sign of Rs only
             end
@@ -213,7 +220,7 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
                 setaluop = `RTB;
             end
             5'b11001: begin //BTR Rd, Rs
-                setregdst = 2'b00;
+                setregdst = 2'b10;
                 setregwrt = 1;
                 setregsrc = 2'b10;
                 setaluop = `BTR;
