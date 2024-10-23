@@ -6,7 +6,7 @@
 */
 `default_nettype none
 module decode (clk, rst, err, PC_in, instruction, wb_data, next_PC_in, PC_out, next_PC_out, srca, srcb, eightBits, elevenBits, instruct,
-               regsrc, immsrc, memwrt, inva, invb, branch, alujmp, aluopr);
+               regsrc, immsrc, memwrt, inva, invb, branch, alujmp, aluopr, dmp, memread);
    input wire clk;
    input wire rst;
    output wire err;
@@ -34,12 +34,14 @@ module decode (clk, rst, err, PC_in, instruction, wb_data, next_PC_in, PC_out, n
    output wire [2:0]branch;
    output wire alujmp;
    output wire [3:0]aluopr;
+   output wire dmp;
+   output wire memread;
 
    wire regdst, ext, regwrt, asource, bsource;
    instruction_decoder instrucDecode(.instruction(instruction[15:11]), .regdst(regdst), .ext(ext), 
                                     .regwrt(regwrt), .bsource(bsource), .branch(branch), .aluop(aluopr), 
                                     .alujmp(alujmp), .invb(invb), .inva(inva), .memwrt(memwrt), .immsrc(immsrc),
-                                    .asource(asource), .regsrc(regsrc));
+                                    .asource(asource), .regsrc(regsrc), .dmp(dmp), .memread(memread));
    
    wire [2:0]wrtreg;
    mux4_1 #(3) muxWriteRegister(.in0(instruction[7:5]), .in1(instruction[10:8]), .in2(instruction[4:2]), 

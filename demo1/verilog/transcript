@@ -1,100 +1,19 @@
-# Compile of add.v was successful.
-# Compile of alu.v failed with 4 errors.
-# Compile of branchCondition.v failed with 6 errors.
-# Compile of cla_4b.v was successful.
-# Compile of cla_16b.v was successful.
-# Compile of clkrst.v was successful.
-# Compile of decode.v failed with 6 errors.
-# Compile of dff.v was successful.
-# Compile of execute.v failed with 1 errors.
-# Compile of fetch.v failed with 5 errors.
-# Compile of fullAdder_1b.v was successful.
-# Compile of instruction_decoder.v failed with 4 errors.
-# Compile of left.v was successful.
-# Compile of memory.v failed with 2 errors.
-# Compile of memory2c.syn.v was successful.
-# Compile of memory2c.v was successful.
-# Compile of mux2_1.v was successful.
-# Compile of mux4_1.v was successful.
-# Compile of mux8_1.v was successful with warnings.
-# Compile of nand2.v was successful.
-# Compile of opcodes.v was successful.
-# Compile of pc.v was successful.
-# Compile of proc.v failed with 3 errors.
-# Compile of proc_hier.v was successful.
-# Compile of proc_hier_bench.v was successful.
-# Compile of regFile.v was successful.
-# Compile of regFile_bypass.v was successful.
-# Compile of register.v was successful.
-# Compile of right.v was successful.
-# Compile of shifter.v was successful.
-# Compile of wb.v failed with 1 errors.
-# Compile of xor2.v was successful.
-# 32 compiles, 9 failed with 32 errors.
-# Compile of alu.v failed with 1 errors.
-# Compile of branchCondition.v failed with 6 errors.
-# Compile of decode.v failed with 6 errors.
-# Compile of execute.v failed with 1 errors.
-# Compile of fetch.v failed with 5 errors.
-# Compile of instruction_decoder.v failed with 4 errors.
-# Compile of memory.v failed with 2 errors.
-# Compile of proc.v failed with 3 errors.
-# Compile of wb.v failed with 1 errors.
-# 9 compiles, 9 failed with 29 errors.
-# Compile of alu.v was successful.
-# Compile of branchCondition.v failed with 6 errors.
-# Compile of decode.v failed with 6 errors.
-# Compile of execute.v failed with 1 errors.
-# Compile of fetch.v failed with 5 errors.
-# Compile of instruction_decoder.v failed with 4 errors.
-# Compile of memory.v failed with 2 errors.
-# Compile of proc.v failed with 3 errors.
-# Compile of wb.v failed with 1 errors.
-# 9 compiles, 8 failed with 28 errors.
-# Compile of branchCondition.v failed with 1 errors.
-# Compile of branchCondition.v was successful.
-# Compile of decode.v failed with 6 errors.
-# Compile of decode.v failed with 1 errors.
-# Compile of decode.v failed with 3 errors.
-# Compile of decode.v failed with 3 errors.
-# Compile of decode.v failed with 28 errors.
-# Compile of decode.v failed with 22 errors.
-# Compile of decode.v failed with 3 errors.
 # Compile of decode.v was successful.
-# Compile of execute.v failed with 27 errors.
 # Compile of execute.v was successful.
-# Compile of fetch.v failed with 5 errors.
-# Compile of instruction_decoder.v failed with 18 errors.
-# Compile of memory.v failed with 2 errors.
-# Compile of proc.v failed with 1 errors.
-# Compile of wb.v failed with 1 errors.
-# 5 compiles, 5 failed with 27 errors.
-# Compile of fetch.v failed with 5 errors.
 # Compile of fetch.v was successful.
-# Compile of instruction_decoder.v failed with 18 errors.
-# Compile of instruction_decoder.v failed with 18 errors.
-# Compile of instruction_decoder.v failed with 2 errors.
-# Compile of instruction_decoder.v failed with 1 errors.
 # Compile of instruction_decoder.v was successful.
-# Compile of memory.v failed with 2 errors.
-# Compile of memory.v failed with 19 errors.
 # Compile of memory.v was successful.
-# Compile of proc.v failed with 1 errors.
 # Compile of proc.v was successful.
-# Compile of wb.v failed with 1 errors.
-# Compile of wb.v failed with 1 errors.
-# Compile of wb.v failed with 1 errors.
-# Compile of wb.v was successful.
+# 6 compiles, 0 failed with no errors.
 vsim -gui work.proc_hier_bench
 # vsim -gui work.proc_hier_bench 
-# Start time: 18:37:12 on Oct 22,2024
+# Start time: 23:21:28 on Oct 22,2024
 # Loading work.proc_hier_bench
 # Loading work.proc_hier
 # Loading work.clkrst
 # Loading work.proc
 # Loading work.fetch
 # Loading work.pc
-# Loading work.add
 # Loading work.cla_16b
 # Loading work.cla_4b
 # Loading work.fullAdder_1b
@@ -114,170 +33,47 @@ vsim -gui work.proc_hier_bench
 # Loading work.shifter
 # Loading work.left
 # Loading work.right
-# Loading work.branchCondition
-# Loading work.memory
-# Loading work.wb
-# Loading work.dff
-# ** Warning: (vsim-3008) [CNNODP] - Component name (decode0) is not on a downward path.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 131
-# ** Error: (vsim-3043) Unresolved reference to 'decode0' in DUT.p0.decode0.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 131
-# ** Warning: (vsim-3008) [CNNODP] - Component name (fetch0) is not on a downward path.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 128
-# ** Error: (vsim-3043) Unresolved reference to 'fetch0' in DUT.p0.fetch0.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 128
-# ** Warning: (vsim-3008) [CNNODP] - Component name (memory0) is not on a downward path.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 140
-# ** Error: (vsim-3043) Unresolved reference to 'memory0' in DUT.p0.memory0.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 140
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pcAdder'.  Expected 7, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Error: (vsim-3063) Port 'sum' not found in the connected module (1st connection).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Error: (vsim-3063) Port 'c_out' not found in the connected module (2nd connection).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Error: (vsim-3063) Port 'c_in' not found in the connected module (5th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'out'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'cin'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'sign'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'overflow'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'cout'.
-# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'err'.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 35
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'regdst'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'bsource'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'aluop'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/muxWriteRegister File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 45
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux8_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/registerFile/rf/mux0 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/regFile.v Line: 35
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/bsourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 64
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'asourceMux'.  Expected 6, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 65
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 65
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(65): [TFMPC] - Missing connection for port 'in2'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(65): [TFMPC] - Missing connection for port 'in3'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_in'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 49
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 49
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'alu_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 49
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_data'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 53
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'in3'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
-# Error loading design
-# End time: 18:37:12 on Oct 22,2024, Elapsed time: 0:00:00
-# Errors: 7, Warnings: 62
-# Compile of memory.v failed with 1 errors.
-# Compile of proc_hier_bench.v was successful.
-# 2 compiles, 1 failed with 1 error.
-# Compile of memory.v was successful.
-vsim -gui work.proc_hier_bench
-# vsim -gui work.proc_hier_bench 
-# Start time: 18:48:48 on Oct 22,2024
-# Loading work.proc_hier_bench
-# Loading work.proc_hier
-# Loading work.clkrst
-# Loading work.proc
-# Loading work.fetch
-# Loading work.pc
 # Loading work.add
-# Loading work.cla_16b
-# Loading work.cla_4b
-# Loading work.fullAdder_1b
-# Loading work.xor2
-# Loading work.nand2
-# Loading work.memory2c
-# Loading work.decode
-# Loading work.instruction_decoder
-# Loading work.mux4_1
-# Loading work.regFile_bypass
-# Loading work.regFile
-# Loading work.mux8_1
-# Loading work.register
-# Loading work.mux2_1
-# Loading work.execute
-# Loading work.alu
-# Loading work.shifter
-# Loading work.left
-# Loading work.right
 # Loading work.branchCondition
 # Loading work.memory
 # Loading work.wb
 # Loading work.dff
-# ** Warning: (vsim-3008) [CNNODP] - Component name (decode) is not on a downward path.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 131
-# ** Error: (vsim-3043) Unresolved reference to 'decode' in DUT.p0.decode.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 131
-# ** Warning: (vsim-3008) [CNNODP] - Component name (fetch) is not on a downward path.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 128
-# ** Error: (vsim-3043) Unresolved reference to 'fetch' in DUT.p0.fetch.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 128
-# ** Warning: (vsim-3008) [CNNODP] - Component name (memory) is not on a downward path.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 140
-# ** Error: (vsim-3043) Unresolved reference to 'memory' in DUT.p0.memory.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 140
-# ** Warning: (vsim-3008) [CNNODP] - Component name (memory0) is not on a downward path.
+# ** Warning: (vsim-3008) [CNNODP] - Component name (dump) is not on a downward path.
 #    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 152
-# ** Error: (vsim-3043) Unresolved reference to 'memory0' in DUT.p0.memory0.
+# ** Error: (vsim-3043) Unresolved reference to 'dump' in DUT.p0.m.dump.
 #    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 152
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pcAdder'.  Expected 7, found 5.
+# ** Warning: (vsim-3008) [CNNODP] - Component name (enable) is not on a downward path.
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 140
+# ** Error: (vsim-3043) Unresolved reference to 'enable' in DUT.p0.m.enable.
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 140
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c_in'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/cla_16b.v(7).
 #    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Error: (vsim-3063) Port 'sum' not found in the connected module (1st connection).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Error: (vsim-3063) Port 'c_out' not found in the connected module (2nd connection).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Error: (vsim-3063) Port 'c_in' not found in the connected module (5th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'out'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'cin'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'sign'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'overflow'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'cout'.
-# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'err'.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 35
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'regdst'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 41
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'bsource'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 41
 # ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'aluop'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 41
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/muxWriteRegister File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 45
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/muxWriteRegister File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 47
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux8_1.v(1).
 #    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/registerFile/rf/mux0 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/regFile.v Line: 35
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/bsourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 64
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/bsourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 66
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'asourceMux'.  Expected 6, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 65
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 67
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 65
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(65): [TFMPC] - Missing connection for port 'in2'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(65): [TFMPC] - Missing connection for port 'in3'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'm'.  Expected 21, found 19.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 49
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 67
+# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(67): [TFMPC] - Missing connection for port 'in2'.
+# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(67): [TFMPC] - Missing connection for port 'in3'.
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_in'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 49
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 51
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 49
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 51
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'alu_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 49
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v(49): [TFMPC] - Missing connection for port 'enable'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v(49): [TFMPC] - Missing connection for port 'dump'.
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 51
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_data'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 53
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 55
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'in3'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
 #    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
@@ -285,19 +81,17 @@ vsim -gui work.proc_hier_bench
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
 #    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
 # Error loading design
-# End time: 18:48:48 on Oct 22,2024, Elapsed time: 0:00:00
-# Errors: 8, Warnings: 33
-# Compile of proc_hier_bench.v was successful.
+# End time: 23:21:28 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 22
 vsim -gui work.proc_hier_bench
 # vsim -gui work.proc_hier_bench 
-# Start time: 18:50:19 on Oct 22,2024
+# Start time: 23:22:40 on Oct 22,2024
 # Loading work.proc_hier_bench
 # Loading work.proc_hier
 # Loading work.clkrst
 # Loading work.proc
 # Loading work.fetch
 # Loading work.pc
-# Loading work.add
 # Loading work.cla_16b
 # Loading work.cla_4b
 # Loading work.fullAdder_1b
@@ -317,147 +111,47 @@ vsim -gui work.proc_hier_bench
 # Loading work.shifter
 # Loading work.left
 # Loading work.right
-# Loading work.branchCondition
-# Loading work.memory
-# Loading work.wb
-# Loading work.dff
-# ** Warning: (vsim-3008) [CNNODP] - Component name (memory) is not on a downward path.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 143
-# ** Error: (vsim-3043) Unresolved reference to 'memory' in DUT.p0.memory.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 143
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pcAdder'.  Expected 7, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Error: (vsim-3063) Port 'sum' not found in the connected module (1st connection).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Error: (vsim-3063) Port 'c_out' not found in the connected module (2nd connection).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Error: (vsim-3063) Port 'c_in' not found in the connected module (5th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'out'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'cin'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'sign'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'overflow'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'cout'.
-# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'err'.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 35
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'regdst'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'bsource'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'aluop'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/muxWriteRegister File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 45
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux8_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/registerFile/rf/mux0 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/regFile.v Line: 35
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/bsourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 64
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'asourceMux'.  Expected 6, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 65
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 65
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(65): [TFMPC] - Missing connection for port 'in2'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(65): [TFMPC] - Missing connection for port 'in3'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'm'.  Expected 21, found 19.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 49
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_in'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 49
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 49
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'alu_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 49
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v(49): [TFMPC] - Missing connection for port 'enable'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v(49): [TFMPC] - Missing connection for port 'dump'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_data'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 53
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'in3'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
-# Error loading design
-# End time: 18:50:20 on Oct 22,2024, Elapsed time: 0:00:01
-# Errors: 5, Warnings: 29
-# Compile of proc_hier_bench.v was successful.
-vsim -gui work.proc_hier_bench
-# vsim -gui work.proc_hier_bench 
-# Start time: 18:50:42 on Oct 22,2024
-# Loading work.proc_hier_bench
-# Loading work.proc_hier
-# Loading work.clkrst
-# Loading work.proc
-# Loading work.fetch
-# Loading work.pc
 # Loading work.add
-# Loading work.cla_16b
-# Loading work.cla_4b
-# Loading work.fullAdder_1b
-# Loading work.xor2
-# Loading work.nand2
-# Loading work.memory2c
-# Loading work.decode
-# Loading work.instruction_decoder
-# Loading work.mux4_1
-# Loading work.regFile_bypass
-# Loading work.regFile
-# Loading work.mux8_1
-# Loading work.register
-# Loading work.mux2_1
-# Loading work.execute
-# Loading work.alu
-# Loading work.shifter
-# Loading work.left
-# Loading work.right
 # Loading work.branchCondition
 # Loading work.memory
 # Loading work.wb
 # Loading work.dff
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pcAdder'.  Expected 7, found 5.
+# ** Warning: (vsim-3008) [CNNODP] - Component name (dump) is not on a downward path.
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 152
+# ** Error: (vsim-3043) Unresolved reference to 'dump' in DUT.p0.m.dump.
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 152
+# ** Warning: (vsim-3008) [CNNODP] - Component name (enable) is not on a downward path.
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 140
+# ** Error: (vsim-3043) Unresolved reference to 'enable' in DUT.p0.m.enable.
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v Line: 140
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c_in'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/cla_16b.v(7).
 #    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Error: (vsim-3063) Port 'sum' not found in the connected module (1st connection).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Error: (vsim-3063) Port 'c_out' not found in the connected module (2nd connection).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Error: (vsim-3063) Port 'c_in' not found in the connected module (5th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'out'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'cin'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'sign'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'overflow'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'cout'.
-# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'err'.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 35
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'regdst'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 41
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'bsource'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 41
 # ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'aluop'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 41
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/muxWriteRegister File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 45
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/muxWriteRegister File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 47
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux8_1.v(1).
 #    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/registerFile/rf/mux0 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/regFile.v Line: 35
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/bsourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 64
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/bsourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 66
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'asourceMux'.  Expected 6, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 65
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 67
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 65
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(65): [TFMPC] - Missing connection for port 'in2'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(65): [TFMPC] - Missing connection for port 'in3'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'm'.  Expected 21, found 19.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 49
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 67
+# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(67): [TFMPC] - Missing connection for port 'in2'.
+# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(67): [TFMPC] - Missing connection for port 'in3'.
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_in'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 49
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 51
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 49
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 51
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'alu_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 49
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v(49): [TFMPC] - Missing connection for port 'enable'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v(49): [TFMPC] - Missing connection for port 'dump'.
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 51
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_data'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 53
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 55
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'in3'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
 #    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
@@ -465,102 +159,20 @@ vsim -gui work.proc_hier_bench
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
 #    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
 # Error loading design
-# End time: 18:50:42 on Oct 22,2024, Elapsed time: 0:00:00
-# Errors: 4, Warnings: 28
-# Compile of fetch.v was successful.
-vsim -gui work.proc_hier_bench
-# vsim -gui work.proc_hier_bench 
-# Start time: 18:52:11 on Oct 22,2024
-# Loading work.proc_hier_bench
-# Loading work.proc_hier
-# Loading work.clkrst
-# Loading work.proc
-# Loading work.fetch
-# Loading work.pc
-# Loading work.add
-# Loading work.cla_16b
-# Loading work.cla_4b
-# Loading work.fullAdder_1b
-# Loading work.xor2
-# Loading work.nand2
-# Loading work.memory2c
-# Loading work.decode
-# Loading work.instruction_decoder
-# Loading work.mux4_1
-# Loading work.regFile_bypass
-# Loading work.regFile
-# Loading work.mux8_1
-# Loading work.register
-# Loading work.mux2_1
-# Loading work.execute
-# Loading work.alu
-# Loading work.shifter
-# Loading work.left
-# Loading work.right
-# Loading work.branchCondition
-# Loading work.memory
-# Loading work.wb
-# Loading work.dff
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pcAdder'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Error: (vsim-3063) Port 'c_in' not found in the connected module (5th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'cin'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'cout'.
-# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'err'.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 35
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'regdst'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'bsource'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'aluop'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/muxWriteRegister File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 45
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux8_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/registerFile/rf/mux0 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/regFile.v Line: 35
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/bsourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 64
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'asourceMux'.  Expected 6, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 65
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 65
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(65): [TFMPC] - Missing connection for port 'in2'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(65): [TFMPC] - Missing connection for port 'in3'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'm'.  Expected 21, found 19.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 49
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_in'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 49
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 49
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'alu_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 49
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v(49): [TFMPC] - Missing connection for port 'enable'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v(49): [TFMPC] - Missing connection for port 'dump'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_data'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 53
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'in3'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
-# Error loading design
-# End time: 18:52:12 on Oct 22,2024, Elapsed time: 0:00:01
-# Errors: 2, Warnings: 25
-# Compile of fetch.v was successful.
+# End time: 23:22:40 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 21
 # Compile of proc.v was successful.
+# Compile of proc_hier_bench.v was successful.
 # 2 compiles, 0 failed with no errors.
 vsim -gui work.proc_hier_bench
 # vsim -gui work.proc_hier_bench 
-# Start time: 18:54:42 on Oct 22,2024
+# Start time: 23:22:49 on Oct 22,2024
 # Loading work.proc_hier_bench
 # Loading work.proc_hier
 # Loading work.clkrst
 # Loading work.proc
 # Loading work.fetch
 # Loading work.pc
-# Loading work.add
 # Loading work.cla_16b
 # Loading work.cla_4b
 # Loading work.fullAdder_1b
@@ -580,142 +192,184 @@ vsim -gui work.proc_hier_bench
 # Loading work.shifter
 # Loading work.left
 # Loading work.right
-# Loading work.branchCondition
-# Loading work.memory
-# Loading work.wb
-# Loading work.dff
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pcAdder'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'cout'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'regdst'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'bsource'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'aluop'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/muxWriteRegister File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 45
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux8_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/registerFile/rf/mux0 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/regFile.v Line: 35
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/bsourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 64
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'asourceMux'.  Expected 6, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 65
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 65
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(65): [TFMPC] - Missing connection for port 'in2'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(65): [TFMPC] - Missing connection for port 'in3'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'm'.  Expected 21, found 19.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_in'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'alu_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 50
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v(50): [TFMPC] - Missing connection for port 'enable'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v(50): [TFMPC] - Missing connection for port 'dump'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_data'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 54
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'in3'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
-add wave -position insertpoint sim:/proc_hier_bench/DUT/*
-run -all
-# Hello world...simulation starting
-# See verilogsim.log and verilogsim.trace for output
-# Error signal asserted
-# ** Note: $stop    : C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/clkrst.v(35)
-#    Time: 100 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/c0
-# Break in Module clkrst at C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/clkrst.v line 35
-# Compile of proc.v was successful.
-vsim -gui work.proc_hier_bench
-# End time: 18:58:09 on Oct 22,2024, Elapsed time: 0:03:27
-# Errors: 0, Warnings: 25
-# vsim -gui work.proc_hier_bench 
-# Start time: 18:58:10 on Oct 22,2024
-# Loading work.proc_hier_bench
-# Loading work.proc_hier
-# Loading work.clkrst
-# Loading work.proc
-# Loading work.fetch
-# Loading work.pc
 # Loading work.add
-# Loading work.cla_16b
-# Loading work.cla_4b
-# Loading work.fullAdder_1b
-# Loading work.xor2
-# Loading work.nand2
-# Loading work.memory2c
-# Loading work.decode
-# Loading work.instruction_decoder
-# Loading work.mux4_1
-# Loading work.regFile_bypass
-# Loading work.regFile
-# Loading work.mux8_1
-# Loading work.register
-# Loading work.mux2_1
-# Loading work.execute
-# Loading work.alu
-# Loading work.shifter
-# Loading work.left
-# Loading work.right
 # Loading work.branchCondition
 # Loading work.memory
 # Loading work.wb
 # Loading work.dff
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pcAdder'.  Expected 7, found 6.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c_in'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/cla_16b.v(7).
 #    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v(17): [TFMPC] - Missing connection for port 'cout'.
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'regdst'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 41
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'bsource'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 41
 # ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'aluop'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 39
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 41
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/muxWriteRegister File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 45
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/muxWriteRegister File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 47
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux8_1.v(1).
 #    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/registerFile/rf/mux0 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/regFile.v Line: 35
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/bsourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 64
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/bsourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 66
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'asourceMux'.  Expected 6, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 65
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 67
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 65
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(65): [TFMPC] - Missing connection for port 'in2'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(65): [TFMPC] - Missing connection for port 'in3'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'm'.  Expected 21, found 19.
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 50
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 67
+# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(67): [TFMPC] - Missing connection for port 'in2'.
+# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(67): [TFMPC] - Missing connection for port 'in3'.
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_in'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 50
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 51
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 50
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 51
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'alu_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 50
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v(50): [TFMPC] - Missing connection for port 'enable'.
-# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v(50): [TFMPC] - Missing connection for port 'dump'.
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 51
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_data'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v(8).
-#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 54
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 55
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'in3'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
 #    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
 #    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
 #    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
-add wave -position insertpoint sim:/proc_hier_bench/DUT/*
 run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.trace for output
-run -continue
-# hmm....more than 100004 cycles of simulation...error?
-# 
-# ** Note: $finish    : C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/clkrst.v(48)
-#    Time: 10000400 ps  Iteration: 1  Instance: /proc_hier_bench/DUT/c0
+# ** Note: $finish    : C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v(97)
+#    Time: 800 ps  Iteration: 1  Instance: /proc_hier_bench
 # 1
-# Break in Module clkrst at C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/clkrst.v line 48
-# End time: 19:04:54 on Oct 22,2024, Elapsed time: 0:06:44
-# Errors: 0, Warnings: 23
+# Break in Module proc_hier_bench at C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v line 97
+restart
+# Closing VCD file "dump.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c_in'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/cla_16b.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'regdst'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'bsource'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'aluop'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/muxWriteRegister File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 47
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux8_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/registerFile/rf/mux0 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/regFile.v Line: 35
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/bsourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 66
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'asourceMux'.  Expected 6, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 67
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 67
+# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(67): [TFMPC] - Missing connection for port 'in2'.
+# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(67): [TFMPC] - Missing connection for port 'in3'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_in'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 51
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 51
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'alu_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 51
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_data'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 55
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'in3'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
+run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.trace for output
+# ** Note: $finish    : C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v(97)
+#    Time: 800 ps  Iteration: 1  Instance: /proc_hier_bench
+# 1
+# Break in Module proc_hier_bench at C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v line 97
+add wave -position insertpoint sim:/proc_hier_bench/DUT/*
+restart
+# Closing VCD file "dump.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c_in'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/cla_16b.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'regdst'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'bsource'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'aluop'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/muxWriteRegister File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 47
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux8_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/registerFile/rf/mux0 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/regFile.v Line: 35
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/bsourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 66
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'asourceMux'.  Expected 6, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 67
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 67
+# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(67): [TFMPC] - Missing connection for port 'in2'.
+# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(67): [TFMPC] - Missing connection for port 'in3'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_in'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 51
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 51
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'alu_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 51
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_data'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 55
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'in3'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
+add wave -position insertpoint sim:/proc_hier_bench/DUT/p0/f/*
+add wave -position insertpoint sim:/proc_hier_bench/DUT/p0/d/*
+add wave -position insertpoint sim:/proc_hier_bench/DUT/p0/x/*
+add wave -position insertpoint sim:/proc_hier_bench/DUT/p0/m/*
+add wave -position insertpoint sim:/proc_hier_bench/DUT/p0/w/*
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'c_in'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/cla_16b.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/f/pcAdder File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fetch.v Line: 17
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'regdst'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'bsource'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'aluop'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/instrucDecode File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/muxWriteRegister File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 47
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux8_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/registerFile/rf/mux0 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/regFile.v Line: 35
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/bsourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 66
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'asourceMux'.  Expected 6, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 67
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/d/asourceMux File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v Line: 67
+# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(67): [TFMPC] - Missing connection for port 'in2'.
+# ** Warning: (vsim-3722) C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v(67): [TFMPC] - Missing connection for port 'in3'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_in'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 51
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 51
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'alu_out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/m File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 51
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'wb_data'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc.v Line: 55
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'in3'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sel'. The port definition is at: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/w/mux1 File: C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v Line: 18
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.trace for output
+# ** Note: $finish    : C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v(97)
+#    Time: 800 ps  Iteration: 1  Instance: /proc_hier_bench
+# 1
+# Break in Module proc_hier_bench at C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v line 97
+# End time: 23:33:07 on Oct 22,2024, Elapsed time: 0:10:18
+# Errors: 0, Warnings: 19

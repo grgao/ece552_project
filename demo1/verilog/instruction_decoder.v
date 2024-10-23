@@ -1,5 +1,5 @@
 `include "opcodes.v"
-module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, aluop, alujmp, invb, inva, memwrt, immsrc, asource, regsrc);
+module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, aluop, alujmp, invb, inva, memwrt, immsrc, asource, regsrc, dmp, memread);
     `include "opcodes.v"  
     input wire [4:0] instruction;
     output wire [1:0]regdst;
@@ -15,6 +15,8 @@ module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, al
     output wire immsrc;
     output wire asource;
     output wire regsrc;
+    output wire dmp;
+    output wire memread;
 
     reg [1:0]setregdst;
     reg set0ext;
@@ -30,6 +32,7 @@ module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, al
     reg setasource;
     reg setregsrc;
     reg setdmp;
+    reg setmemread;
 
     assign regdst = setregdst;
     assign ext = set0ext;
@@ -45,6 +48,7 @@ module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, al
     assign asource = setasource;
     assign regsrc = setregsrc;
     assign dmp = setdmp;
+    assign memread = setmemread;
 
     always @(*) begin
         //default values
@@ -62,6 +66,7 @@ module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, al
         setimmsrc = 0;
         setasource = 0;
         setregsrc = 0;
+        setmemread = 0;
 
         casex(instruction)
             5'b00000: begin //halt
@@ -145,6 +150,7 @@ module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, al
                 setregwrt = 1;
                 setregdst = 2'b00;
                 setaluop = `ADD;
+                setmemread = 1;
             end
             5'b10010: begin // SLBI Rs, immediate
                 setasource = 1;

@@ -7,7 +7,7 @@
 `default_nettype none
 module execute (PC_in, eightBits, elevenBits, asrc, bsrc, next_PC_in, instruct, wb_in, 
 regsrc, immsrc, memwrt, inva, invb, branch, alujmp, aluopr, PC_out, jmpSource, 
-alu_out, srcb_out, next_PC_out, wb_out, setrd, regsrc_out, alujmp_out, brchcnd, memwrt_out);
+alu_out, srcb_out, next_PC_out, wb_out, setrd, regsrc_out, alujmp_out, brchcnd, memwrt_out, dmp, dmp_out, memread, memread_out);
    
    //////////// INPUTS /////////////
    // wires
@@ -29,6 +29,8 @@ alu_out, srcb_out, next_PC_out, wb_out, setrd, regsrc_out, alujmp_out, brchcnd, 
    input wire [2:0]branch;
    input wire alujmp;
    input wire [3:0]aluopr;
+   input wire dmp;
+   input wire memread;
 
    ///////////  OUTPUTS /////////////
    // wires
@@ -45,6 +47,8 @@ alu_out, srcb_out, next_PC_out, wb_out, setrd, regsrc_out, alujmp_out, brchcnd, 
    output wire alujmp_out;
    output wire brchcnd;
    output wire memwrt_out;
+   output wire dmp_out;
+   output wire memread_out;
 
    wire SF, ZF, OF, CF;
 
@@ -62,6 +66,8 @@ alu_out, srcb_out, next_PC_out, wb_out, setrd, regsrc_out, alujmp_out, brchcnd, 
    assign regsrc_out = regsrc;
    assign alujmp_out = alujmp;
    assign memwrt_out = memwrt;
+   assign memread_out = memread;
+   assign dmp_out = dmp;
 
 endmodule
 `default_nettype wire

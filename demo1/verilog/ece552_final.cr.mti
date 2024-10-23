@@ -12,14 +12,14 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	regFile
 
-} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v {1 {vlog -work work -stats=none {C:\Users\tyler_hyposvu\UW\ece552\ece552_project\demo1\verilog\instruction_decoder.v}
+} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/instruction_decoder.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module instruction_decoder
 
 Top level modules:
 	instruction_decoder
 
-} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v {1 {vlog -work work -stats=none {C:\Users\tyler_hyposvu\UW\ece552\ece552_project\demo1\verilog\memory.v}
+} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module memory
 
@@ -89,13 +89,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	proc
 
-} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux2_1.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux2_1.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module mux2_1
-
-Top level modules:
-	mux2_1
-
 } {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/decode.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module decode
@@ -103,12 +96,15 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	decode
 
-} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/shifter.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/shifter.v
+} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux2_1.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux2_1.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module shifter
+-- Compiling module mux2_1
 
 Top level modules:
-	shifter
+	mux2_1
+
+} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/opcodes.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/opcodes.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
 } {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/register.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/register.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -117,22 +113,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	register
 
-} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/opcodes.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/opcodes.v
+} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/shifter.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/shifter.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-
-} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module mux4_1
+-- Compiling module shifter
 
 Top level modules:
-	mux4_1
-
-} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory2c.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory2c.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module memory2c
-
-Top level modules:
-	memory2c
+	shifter
 
 } {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory2c.syn.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory2c.syn.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -141,19 +127,26 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	memory2c
 
+} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory2c.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/memory2c.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module memory2c
+
+Top level modules:
+	memory2c
+
+} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux4_1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux4_1
+
+Top level modules:
+	mux4_1
+
 } {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/regFile_bypass.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/regFile_bypass.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module regFile_bypass
 
 Top level modules:
 	regFile_bypass
-
-} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/cla_16b.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/cla_16b.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module cla_16b
-
-Top level modules:
-	cla_16b
 
 } {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/dff.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/dff.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -162,6 +155,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	dff
 
+} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/cla_16b.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/cla_16b.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module cla_16b
+
+Top level modules:
+	cla_16b
+
 } {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/wb.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module wb
@@ -169,12 +169,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	wb
 
-} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v
+} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/alu.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/alu.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module proc_hier_bench
+-- Compiling module alu
 
 Top level modules:
-	proc_hier_bench
+	alu
 
 } {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux8_1.v {2 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/mux8_1.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -186,12 +186,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	mux8_1
 
-} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/alu.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/alu.v
+} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/proc_hier_bench.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module alu
+-- Compiling module proc_hier_bench
 
 Top level modules:
-	alu
+	proc_hier_bench
 
 } {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/pc.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/pc.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -200,12 +200,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	pc
 
-} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/branchCondition.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/branchCondition.v
+} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fullAdder_1b.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fullAdder_1b.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module branchCondition
+-- Compiling module fullAdder_1b
 
 Top level modules:
-	branchCondition
+	fullAdder_1b
 
 } {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/cla_4b.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/cla_4b.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -214,11 +214,11 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	cla_4b
 
-} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fullAdder_1b.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/fullAdder_1b.v
+} {} {}} C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/branchCondition.v {1 {vlog -work work -stats=none C:/Users/tyler_hyposvu/UW/ece552/ece552_project/demo1/verilog/branchCondition.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module fullAdder_1b
+-- Compiling module branchCondition
 
 Top level modules:
-	fullAdder_1b
+	branchCondition
 
 } {} {}}
