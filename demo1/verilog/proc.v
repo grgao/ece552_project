@@ -28,8 +28,8 @@ module proc (/*AUTOARG*/
    fetch f(.instruction(instruction_f_d), .branch_pc(branch_pc), .pc(pc_d_f), .clk(clk), .rst(rst));
 
    wire [15:0]wbdata_x_d, nextPC_x_d, pc_d_x, srca, srcb, eightBits, elevenBits;
-   wire [1:0]instruct;
-   wire err1, regsrc, immsrc, memwrt, inva, invb, alujmp, memread, dmp;
+   wire [1:0]instruct, regsrc;
+   wire err1, immsrc, memwrt, inva, invb, alujmp, memread, dmp;
    wire [3:0] aluopr;
    wire [2:0]branch;
    decode d(.clk(clk), .rst(rst), .err(err1), .PC_in(branch_pc), .instruction(instruction_f_d), .wb_data(wbdata_x_d),
@@ -37,7 +37,8 @@ module proc (/*AUTOARG*/
             .elevenBits(elevenBits), .instruct(instruct), .regsrc(regsrc), .immsrc(immsrc), .memwrt(memwrt), .inva(inva), 
             .invb(invb), .branch(branch), .alujmp(alujmp), .aluopr(aluopr), .memread(memread), .dmp(dmp));
    wire [15:0]nextPC_m_x, wb_m_x, pc_x_m, jmpSource, alu_x_m, srcb_out;
-   wire setrd, regsrc_out, alujmp_out, brchcnd, memwrt_out, memread_out, dmp_out;
+   wire [1:0]regsrc_out;
+   wire setrd, alujmp_out, brchcnd, memwrt_out, memread_out, dmp_out;
    execute x(.PC_in(pc_d_x), .eightBits(eightBits), .elevenBits(elevenBits), .asrc(srca), .bsrc(srcb), .next_PC_in(nextPC_m_x), 
             .instruct(instruct), .wb_in(wb_m_x), .regsrc(regsrc), .immsrc(immsrc), .memwrt(memwrt), .inva(inva), 
             .invb(invb), .branch(branch), .alujmp(alujmp), .aluopr(aluopr), .PC_out(pc_x_m), .jmpSource(jmpSource), 
@@ -46,7 +47,8 @@ module proc (/*AUTOARG*/
             .dmp(dmp), .memread(memread), .dmp_out(dmp_out), .memread_out(memread_out));
    
    wire[15:0] wb_w_m, mem_data, PC_reg, alu_out_m_w;
-   wire setrd_out, regsrc2;
+   wire setrd_out;
+   wire [1:0]regsrc2;
    memory m(.data_in(srcb_out), .addr(alu_x_m), .wb_in(wb_w_m), .wb_out(wb_m_x), .clk(clk), .rst(rst), .data_out(mem_data),
             .PC_in(pc_x_m), .regsrc_in(regsrc_out), .jmpSource(jmpSource), .brchcnd(brchcnd), .alujmp(alujmp_out), 
             .setrd_in(setrd), .PC_reg(PC_reg), .PC_out(nextPC_m_x), .setrd_out(setrd_out), .alu_out(alu_out_m_w), 

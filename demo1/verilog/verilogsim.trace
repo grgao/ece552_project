@@ -1,6 +1,6 @@
-INUM:        0 PC: 0x0002 REG: X VALUE: 0xzzzX
-INUM:        1 PC: 0x0004 REG: X VALUE: 0xzzzX
-INUM:        2 PC: 0x0006 REG: X VALUE: 0xzzzX
-INUM:        3 PC: 0x0008 REG: x VALUE: 0xzzzX
-INUM:        4 PC: 0x000a REG: X VALUE: 0xzzzX
+INUM:        0 PC: 0x0002 REG: 1 VALUE: 0xxxxx
+INUM:        1 PC: 0x0004 REG: 2 VALUE: 0xxxxx
+INUM:        2 PC: 0x0006 REG: 3 VALUE: 0xxxxx
+INUM:        3 PC: 0x0008 REG: 4 VALUE: 0xxxxx
+INUM:        4 PC: 0x000a REG: 5 VALUE: 0xxxxx
 INUM:        5 PC: 0x000c

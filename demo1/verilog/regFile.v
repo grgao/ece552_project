@@ -32,7 +32,7 @@ module regFile (
    wire err0, err1, err2, err3, err4, err5, err6, err7;
    wire errMux0, errMux1, errMux2;
 
-   mux8_1 mux0 (.out(write), .in0(16'b0000000000000001), .in1(16'b0000000000000010), .in2(16'b0000000000000100), .in3(16'b0000000000001000), .in4(16'b0000000000010000), .in5(16'b0000000000100000), .in6(16'b0000000001000000), .in7(16'b0000000010000000), .sel(writeRegSel), .err(errMux0));
+   mux8_1 #(8) mux0 (.out(write), .in0(8'b000000001), .in1(8'b00000010), .in2(8'b00000100), .in3(8'b00001000), .in4(8'b00010000), .in5(8'b00100000), .in6(8'b01000000), .in7(8'b10000000), .sel(writeRegSel), .err(errMux0));
 
    assign regwrite = write & {8{writeEn}};
 

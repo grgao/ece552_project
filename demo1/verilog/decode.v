@@ -26,7 +26,7 @@ module decode (clk, rst, err, PC_in, instruction, wb_data, next_PC_in, PC_out, n
    output wire [1:0]instruct;
 
    // output - decode
-   output wire regsrc;
+   output wire [1:0]regsrc;
    output wire immsrc;
    output wire memwrt;
    output wire inva;
@@ -36,8 +36,8 @@ module decode (clk, rst, err, PC_in, instruction, wb_data, next_PC_in, PC_out, n
    output wire [3:0]aluopr;
    output wire dmp;
    output wire memread;
-
-   wire regdst, ext, regwrt, asource, bsource;
+   wire [1:0]regdst, bsource;
+   wire ext, regwrt, asource;
    instruction_decoder instrucDecode(.instruction(instruction[15:11]), .regdst(regdst), .ext(ext), 
                                     .regwrt(regwrt), .bsource(bsource), .branch(branch), .aluop(aluopr), 
                                     .alujmp(alujmp), .invb(invb), .inva(inva), .memwrt(memwrt), .immsrc(immsrc),
@@ -64,7 +64,7 @@ module decode (clk, rst, err, PC_in, instruction, wb_data, next_PC_in, PC_out, n
    wire [15:0]shftSrcA;
    assign shftSrcA = src1 << 8;
    mux4_1 bsourceMux(.in0(src2), .in1(fiveBits), .in2(eightBits), .in3(elevenBits), .sel(bsource), .out(srcb));
-   mux4_1 asourceMux(.in0(src1), .in1(shftSrcA), .sel(asource), .out(srca));
+   mux2_1 asourceMux(.in0(src1), .in1(shftSrcA), .sel(asource), .out(srca));
    assign instruct = instruction[1:0];
    assign PC_out = PC_in;
    assign next_PC_out = next_PC_in;

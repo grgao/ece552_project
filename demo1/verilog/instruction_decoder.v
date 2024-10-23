@@ -7,14 +7,14 @@ module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, al
     output wire regwrt;
     output wire [1:0] bsource;
     output wire [2:0] branch;
-    output wire [2:0] aluop;
+    output wire [3:0] aluop;
     output wire alujmp;
     output wire invb;
     output wire inva;
     output wire memwrt;
     output wire immsrc;
     output wire asource;
-    output wire regsrc;
+    output wire [1:0]regsrc;
     output wire dmp;
     output wire memread;
 
@@ -30,7 +30,7 @@ module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, al
     reg setmemwrt;
     reg setimmsrc;
     reg setasource;
-    reg setregsrc;
+    reg [1:0]setregsrc;
     reg setdmp;
     reg setmemread;
 

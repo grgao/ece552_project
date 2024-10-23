@@ -21,7 +21,7 @@ alu_out, srcb_out, next_PC_out, wb_out, setrd, regsrc_out, alujmp_out, brchcnd, 
    input wire [15:0]wb_in;
 
    // decoder
-   input wire regsrc;
+   input wire [1:0]regsrc;
    input wire immsrc;
    input wire memwrt;
    input wire inva;
@@ -43,7 +43,7 @@ alu_out, srcb_out, next_PC_out, wb_out, setrd, regsrc_out, alujmp_out, brchcnd, 
    output wire setrd;
 
    // decode
-   output wire regsrc_out;
+   output wire [1:0]regsrc_out;
    output wire alujmp_out;
    output wire brchcnd;
    output wire memwrt_out;

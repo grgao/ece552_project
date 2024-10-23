@@ -15,8 +15,8 @@ module memory (data_in, addr, wb_in, wb_out, clk, rst, data_out, PC_in, regsrc_i
    input wire clk;
    input wire rst;
    output wire [15:0] data_out;
-   input wire wb_in;
-   output wire wb_out;
+   input wire [15:0]wb_in;
+   output wire [15:0]wb_out;
 
    // jmp
    input wire [15:0] PC_in;
@@ -24,14 +24,14 @@ module memory (data_in, addr, wb_in, wb_out, clk, rst, data_out, PC_in, regsrc_i
    input wire setrd_in;
    output wire [15:0] PC_reg;
    output wire [15:0] PC_out;
-   output wire alu_out;
+   output wire [15:0]alu_out;
    output wire setrd_out;
 
    // Decode
    input wire alujmp;
    input wire brchcnd;
-   input wire regsrc_in;
-   output wire regsrc_out;
+   input wire [1:0]regsrc_in;
+   output wire [1:0]regsrc_out;
    input wire memwrt;
    input wire dmp;
    input wire memread;

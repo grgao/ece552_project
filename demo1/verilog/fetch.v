@@ -14,7 +14,7 @@ module fetch (instruction, branch_pc, pc, clk, rst);
    wire [15:0] pc_out;
 
    pc pc1(.clk(clk), .rst(rst), .pc_out(pc_out), .pc_in(pc));
-   cla_16b pcAdder(.sum(branch_pc), .c_out(), .a(pc_out), .b(16'd2), .c_in(0));
+   cla_16b pcAdder(.sum(branch_pc), .c_out(), .a(pc_out), .b(16'd2), .c_in(1'b0));
    memory2c instructionMem(.data_out(instruction), .addr(pc_out), .enable(1'b1), .wr(1'b0), .data_in(), .clk(clk), .rst(rst), .createdump(1'b1));
    
 endmodule
