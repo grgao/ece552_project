@@ -6,33 +6,34 @@
                      processor.
 */
 `default_nettype none
-module memory (data_in, addr, wb_in, wb_out, clk, rst, data_out, PC_in, regsrc_in,
+module memory (data_in, addr, wb_in, wb_out, clk, rst, data_out, PC_in, regsrc_in, enable, dump,
                jmpSource, brchcnd, alujmp, setrd_in, PC_reg, PC_out, setrd_out, alu_out, regsrc_out, memwrt);
    
    // data mamory
-   input [15:0] data_in;
-   input [15:0] addr;
-   input clk;
-   input rst;
-   output [15:0] data_out;
-   input wb_in;
-   output wb_out;
-
+   input wire [15:0] data_in;
+   input wire [15:0] addr;
+   input wire clk;
+   input wire rst;
+   output wire [15:0] data_out;
+   input wire wb_in;
+   output wire wb_out;
+   input wire enable;
+   input wire dump;
    // jmp
-   input [15:0] PC_in;
-   input [15:0] jmpSource;
-   input setrd_in;
-   output [15:0] PC_reg;
-   output [15:0] PC_out;
-   output alu_out;
-   output setrd_out;
+   input wire [15:0] PC_in;
+   input wire [15:0] jmpSource;
+   input wire setrd_in;
+   output wire [15:0] PC_reg;
+   output wire [15:0] PC_out;
+   output wire alu_out;
+   output wire setrd_out;
 
    // Decode
-   input alujmp;
-   input brchcnd;
-   input regsrc_in;
-   output regsrc_out;
-   input memwrt;
+   input wire alujmp;
+   input wire brchcnd;
+   input wire regsrc_in;
+   output wire regsrc_out;
+   input wire memwrt;
 
 
 
@@ -40,10 +41,10 @@ module memory (data_in, addr, wb_in, wb_out, clk, rst, data_out, PC_in, regsrc_i
    wire [15:0]jmpAddr;
    wire [15:0]branchMux;
 
-   add add1(.a(PC_in), .b(jmpSource), .out(jmpAddr), .cin(1'b0), .sign(1'b1), .overflow() .cout());
+   add add1(.a(PC_in), .b(jmpSource), .out(jmpAddr), .cin(1'b0), .sign(1'b1), .overflow(),.cout());
    mux2_1 mux1(.in0(PC_in), .in1(jmpAddr), .sel(brchcnd), .out(branchMux));
-   mux2_1 mux2(.in0(branchMux), in1(addr), .sel(alujmp), .out(PC_out));
-   memory2c memory(.data_in(data_in), .data_out(data_out), .addr(addr), .enable(1'b1), .wr(memwrt), .clk(clk), .rst(rst), .createdump(1'b1));
+   mux2_1 mux2(.in0(branchMux), .in1(addr), .sel(alujmp), .out(PC_out));
+   memory2c memory(.data_in(data_in), .data_out(data_out), .addr(addr), .enable(enable), .wr(memwrt), .clk(clk), .rst(rst), .createdump(dump));
 
    assign PC_reg = PC_in;
    assign setrd_out = setrd_in;

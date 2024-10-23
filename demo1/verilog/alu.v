@@ -10,6 +10,7 @@
     (OFL).
 */
 module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, instruct, ZF, OF, SF, CF);
+    `include "opcodes.v"  
     parameter OPERAND_WIDTH = 16;    
     parameter NUM_OPERATIONS = 4;
        
@@ -20,7 +21,7 @@ module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, instruct, ZF, OF, SF, CF
     input                       invA; // Signal to invert A
     input                       invB; // Signal to invert B
     input                       sign; // Signal for signed operation
-    input  [1:0]                instruct // opcode for r-type instructions
+    input  [1:0]                instruct; // opcode for r-type instructions
     output [OPERAND_WIDTH -1:0] Out ; // Result of computation
     output                      OF ; // Signal if overflow occured
     output                      ZF; // Signal if Out is 0
@@ -34,7 +35,7 @@ module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, instruct, ZF, OF, SF, CF
     wire [OPERAND_WIDTH -1:0]out1;
 
     wire [NUM_OPERATIONS - 1 : 0]acutalOp;
-    assign actualOp = (Oper === OP) ? {2'b01, instruct} : Oper;
+    assign actualOp = (Oper === `OP) ? {2'b01, instruct} : Oper;
     //invert A if needed
     assign actA = invA ? ~InA : InA;
     //invert B if needed
@@ -42,7 +43,7 @@ module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, instruct, ZF, OF, SF, CF
     
     shifter shift(.In(actA), .ShAmt(actB[3:0]), .Oper(acutalOp[1:0]), .Out(out_shft));
 
-    add add(.a(actA), .b(actB), .cin(Cin), .out(out_add), .sign(sign), .overflow(OF), cout(CF));
+    add add(.a(actA), .b(actB), .cin(Cin), .out(out_add), .sign(sign), .overflow(OF), .cout(CF));
 
     assign Out = acutalOp[3] ? (acutalOp[0] ? actB : {actA[0], actA[1], actA[2], actA[3], actA[4], actA[5], actA[6], actA[7], actA[8], actA[9], actA[10], actA[11], actA[12], actA[13], actA[14], actA[15]}) : 
             (acutalOp[2] ? (acutalOp[1] ? (acutalOp[0] ? actA^actB : actA|actB) : (acutalOp[0] ? actA&actB : out_add)): out_shft);

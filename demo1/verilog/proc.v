@@ -27,18 +27,19 @@ module proc (/*AUTOARG*/
    wire [15:0]instruction_f_d, branch_pc, pc_d_f;
    fetch f(.instruction(instruction_f_d), .branch_pc(branch_pc), .pc(pc_d_f), .clk(clk), .rst(rst));
 
-   wire [15:0]wbdata_x_d, nextPC_x_d, pc_d_x, srca, srcb, 8bits, 11bits,
+   wire [15:0]wbdata_x_d, nextPC_x_d, pc_d_x, srca, srcb, eightBits, elevenBits;
    wire [1:0]instruct;
-   wire regsrc, immsrc, memwrt, inva, invb, alujmp;
+   wire err1, regsrc, immsrc, memwrt, inva, invb, alujmp;
    wire [3:0] aluopr;
    wire [2:0]branch;
-   decode d(.clk(clk), .rst(rst), .err(err), .PC_in(branch_pc), .instruction(instruction_f_d), .wb_data(wbdata_x_d),
-            .next_PC_in(nextPC_x_d), .PC_out(pc_d_x), .next_PC_out(pc_d_f), .srca(srca), .srcb(srcb), .8bits(8bits),
-            .11bits(11bits), .instruct(instruct), .regsrc(regsrc), .immsrc(immsrc), .memwrt(memwrt), .inva(inva), 
+   assign err = 0;
+   decode d(.clk(clk), .rst(rst), .err(err1), .PC_in(branch_pc), .instruction(instruction_f_d), .wb_data(wbdata_x_d),
+            .next_PC_in(nextPC_x_d), .PC_out(pc_d_x), .next_PC_out(pc_d_f), .srca(srca), .srcb(srcb), .eightBits(eightBits),
+            .elevenBits(elevenBits), .instruct(instruct), .regsrc(regsrc), .immsrc(immsrc), .memwrt(memwrt), .inva(inva), 
             .invb(invb), .branch(branch), .alujmp(alujmp), .aluopr(aluopr));
    wire [15:0]nextPC_m_x, wb_m_x, pc_x_m, jmpSource, alu_x_m, srcb_out;
    wire setrd, regsrc_out, alujmp_out, brchcnd, memwrt_out;
-   execute x(.PC_in(pc_d_x), .8bits(8bits), .11bits(11bits), .asrc(srca), .bsrc(srcb), .next_PC_in(nextPC_m_x), 
+   execute x(.PC_in(pc_d_x), .eightBits(eightBits), .elevenBits(elevenBits), .asrc(srca), .bsrc(srcb), .next_PC_in(nextPC_m_x), 
             .instruct(instruct), .wb_in(wb_m_x), .regsrc(regsrc), .immsrc(immsrc), .memwrt(memwrt), .inva(inva), 
             .invb(invb), .branch(branch), .alujmp(alujmp), .aluopr(aluopr), .PC_out(pc_x_m), .jmpSource(jmpSource), 
             .alu_out(alu_x_m), .srcb_out(srcb_out), .next_PC_out(nextPC_x_d), .wb_out(wbdata_x_d), .setrd(setrd), 
