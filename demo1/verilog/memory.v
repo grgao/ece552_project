@@ -17,7 +17,6 @@ module memory (halt, data_in, addr, adderSrc, inPC, brchCnd, alujmp, enable, wr,
     input wire wr;
     input wire clk;
     input wire rst;
-    input wire createdump;
     input wire halt;
     output wire [15:0] data_out;
     output wire [15:0] outPC;
