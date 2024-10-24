@@ -9,50 +9,74 @@ z2
 cModel Technology
 Z0 d/home/chent/ece552/ece552_project/demo1/verilog
 vadd
-Z1 !s110 1729724005
+Z1 !s110 1729729581
 !i10b 1
-!s100 HRMT4S`gQ^`N0JH`SWC=Y1
-IL^3AbjUo?k>:W>DeBgjh32
+!s100 BJR6J4;f8kHJIS;dc>CX=3
+IZOC]GWngaMSW[^ejU[jS?0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1729662690
+w1729728054
 8add.v
 Fadd.v
 L0 1
-Z4 OP;L;10.7c;67
+Z3 OP;L;10.7c;67
 r1
 !s85 0
 31
-Z5 !s108 1729724005.000000
+Z4 !s108 1729729581.000000
 !s107 xor2.v|wb.v|shifter.v|right.v|register.v|regFile.v|regFile_bypass.v|proc.v|proc_hier.v|proc_hier_bench.v|pc.v|opcodes.v|nand2.v|mux8_1.v|mux4_1.v|mux2_1.v|memory.v|memory2c.v|left.v|instruction_decoder.v|fullAdder_1b.v|fetch.v|execute.v|dff.v|decode.v|clkrst.v|cla_4b.v|cla_16b.v|branchCondition.v|alu.v|add.v|
-Z6 !s90 +define+RANDSEED=3|-work|__work|add.v|alu.v|branchCondition.v|cla_16b.v|cla_4b.v|clkrst.v|decode.v|dff.v|execute.v|fetch.v|fullAdder_1b.v|instruction_decoder.v|left.v|memory2c.v|memory.v|mux2_1.v|mux4_1.v|mux8_1.v|nand2.v|opcodes.v|pc.v|proc_hier_bench.v|proc_hier.v|proc.v|regFile_bypass.v|regFile.v|register.v|right.v|shifter.v|wb.v|xor2.v|
+Z5 !s90 +define+RANDSEED=3|-work|__work|add.v|alu.v|branchCondition.v|cla_16b.v|cla_4b.v|clkrst.v|decode.v|dff.v|execute.v|fetch.v|fullAdder_1b.v|instruction_decoder.v|left.v|memory2c.v|memory.v|mux2_1.v|mux4_1.v|mux8_1.v|nand2.v|opcodes.v|pc.v|proc_hier_bench.v|proc_hier.v|proc.v|regFile_bypass.v|regFile.v|register.v|right.v|shifter.v|wb.v|xor2.v|
 !i113 1
-Z7 o-work __work
-Z8 !s92 +define+RANDSEED=3 -work __work
-Z9 tCvgOpt 0
+Z6 o-work __work
+Z7 !s92 +define+RANDSEED=3 -work __work
+Z8 tCvgOpt 0
 valu
 R1
 !i10b 1
-!s100 `QDW8]Ui3RinXBOXQOB2T3
-IA2IgQZhaNb2aQnLEOG[Q22
+!s100 QbU_gk]V2d7F[knT5Sd`_3
+IR^CL;KUac:YYheBN_Pz2K2
 R2
 R0
-w1729723104
+w1729727349
 8alu.v
 Falu.v
-Z10 Fopcodes.v
+Z9 Fopcodes.v
 L0 12
-R4
+R3
 r1
 !s85 0
 31
+R4
+Z10 !s107 xor2.v|wb.v|shifter.v|right.v|register.v|regFile.v|regFile_bypass.v|proc.v|proc_hier.v|proc_hier_bench.v|pc.v|opcodes.v|nand2.v|mux8_1.v|mux4_1.v|mux2_1.v|memory.v|memory2c.v|left.v|instruction_decoder.v|fullAdder_1b.v|fetch.v|execute.v|dff.v|decode.v|clkrst.v|cla_4b.v|cla_16b.v|branchCondition.v|alu.v|add.v|
 R5
-Z11 !s107 xor2.v|wb.v|shifter.v|right.v|register.v|regFile.v|regFile_bypass.v|proc.v|proc_hier.v|proc_hier_bench.v|pc.v|opcodes.v|nand2.v|mux8_1.v|mux4_1.v|mux2_1.v|memory.v|memory2c.v|left.v|instruction_decoder.v|fullAdder_1b.v|fetch.v|execute.v|dff.v|decode.v|clkrst.v|cla_4b.v|cla_16b.v|branchCondition.v|alu.v|add.v|
-R6
 !i113 1
+R6
 R7
 R8
+vbranchCondition
+R1
+!i10b 1
+!s100 0Q2h@;:FbS0`gA_J=>2G42
+IiDf`IPKKQSBdN`e2U40XK1
+R2
+R0
+w1729725672
+8branchCondition.v
+FbranchCondition.v
 R9
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+R10
+R5
+!i113 1
+R6
+R7
+R8
+nbranch@condition
 vcla_16b
 R1
 !i10b 1
@@ -60,21 +84,21 @@ R1
 IGf@m93gbefoWT>1BGQFad2
 R2
 R0
-R3
+w1729727876
 8cla_16b.v
 Fcla_16b.v
 L0 7
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vcla_4b
 R1
 !i10b 1
@@ -82,21 +106,21 @@ R1
 I]GWSPzji>2Pmko2zNS2lP1
 R2
 R0
-R3
+w1729727902
 8cla_4b.v
 Fcla_4b.v
 L0 7
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vclkrst
 R1
 !i10b 1
@@ -104,21 +128,21 @@ R1
 IcU3NbIBf6S_9FV@GH4;Og1
 R2
 R0
-Z12 w1729662681
+Z11 w1729662681
 8clkrst.v
 Fclkrst.v
 L0 13
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vdecode
 R1
 !i10b 1
@@ -126,21 +150,21 @@ R1
 IzQ1MImgB6?bnWTU^Qzeh;2
 R2
 R0
-w1729723151
+w1729724433
 8decode.v
 Fdecode.v
 L0 8
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vdff
 R1
 !i10b 1
@@ -148,44 +172,44 @@ R1
 I`<l<ahfib5LObb;M<UG9I1
 R2
 R0
-R12
+R11
 8dff.v
 Fdff.v
 L0 6
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vexecute
 R1
 !i10b 1
-!s100 BOAYJ36S2LY5X4lXl4`Pd2
-I<4hnKgaI5ZoO]P4RLoRNY3
+!s100 >90zVPVImk9?gm[VhDGV13
+Ika;535ah@@8KMRC1XcIR01
 R2
 R0
-w1729724001
+w1729728584
 8execute.v
 Fexecute.v
-R10
+R9
 L0 8
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vfetch
 R1
 !i10b 1
@@ -193,21 +217,21 @@ R1
 IJD=n:=ShEJhcT3T;jJb@43
 R2
 R0
-R3
+Z12 w1729662690
 8fetch.v
 Ffetch.v
 L0 8
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vfullAdder_1b
 R1
 !i10b 1
@@ -215,21 +239,21 @@ R1
 IOB0j3E1POf?]EQZ;U6H:03
 R2
 R0
-R3
+R12
 8fullAdder_1b.v
 FfullAdder_1b.v
 L0 7
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 nfull@adder_1b
 vinstruction_decoder
 R1
@@ -241,19 +265,19 @@ R0
 w1729723782
 8instruction_decoder.v
 Finstruction_decoder.v
-R10
+R9
 L0 2
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vleft
 R1
 !i10b 1
@@ -261,21 +285,21 @@ R1
 I5;427DT;hHZG`Udn807B@1
 R2
 R0
-R3
+R12
 8left.v
 Fleft.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vmemory
 R1
 !i10b 1
@@ -283,21 +307,21 @@ R1
 I_`MNQCX5Lc>MG9JeXnzFV2
 R2
 R0
-R3
+R12
 8memory.v
 Fmemory.v
 L0 9
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vmemory2c
 R1
 !i10b 1
@@ -305,21 +329,21 @@ R1
 I5:0bhPSZGSbBD:5kcoEH=2
 R2
 R0
-R12
+R11
 8memory2c.v
 Fmemory2c.v
 L0 35
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vmux2_1
 R1
 !i10b 1
@@ -327,21 +351,21 @@ R1
 ID]J]VVHm]_S<bnM7ee^dH1
 R2
 R0
-R3
+R12
 8mux2_1.v
 Fmux2_1.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vmux4_1
 R1
 !i10b 1
@@ -349,21 +373,21 @@ R1
 IodO_T3ho^IEc[>iZ]=]cE2
 R2
 R0
-R3
+R12
 8mux4_1.v
 Fmux4_1.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vmux8_1
 R1
 !i10b 1
@@ -371,21 +395,21 @@ R1
 IzliI@T_VjoDl112@dPLP43
 R2
 R0
-R3
+R12
 8mux8_1.v
 Fmux8_1.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vnand2
 R1
 !i10b 1
@@ -393,21 +417,21 @@ R1
 IdCo`d=BNl03WmP>ia@f[?3
 R2
 R0
-R3
+R12
 8nand2.v
 Fnand2.v
 L0 7
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vpc
 R1
 !i10b 1
@@ -415,21 +439,21 @@ R1
 IZDCI^<7azhC7?1G0>UVVl0
 R2
 R0
-R3
+R12
 8pc.v
 Fpc.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vproc
 R1
 !i10b 1
@@ -441,17 +465,17 @@ w1729723172
 8proc.v
 Fproc.v
 L0 5
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vproc_hier
 R1
 !i10b 1
@@ -459,21 +483,21 @@ R1
 I?@=;1a89@`0h;0V<;D4kj0
 R2
 R0
-R12
+R11
 8proc_hier.v
 Fproc_hier.v
 L0 6
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vproc_hier_bench
 R1
 !i10b 1
@@ -485,17 +509,17 @@ w1729704980
 8proc_hier_bench.v
 Fproc_hier_bench.v
 L0 5
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vregFile
 R1
 !i10b 1
@@ -507,17 +531,17 @@ w1729709038
 8regFile.v
 FregFile.v
 Z13 L0 10
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 nreg@file
 vregFile_bypass
 R1
@@ -530,17 +554,17 @@ w1729709032
 8regFile_bypass.v
 FregFile_bypass.v
 L0 8
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 nreg@file_bypass
 vregister
 R1
@@ -553,17 +577,17 @@ w1729710745
 8register.v
 Fregister.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vright
 R1
 !i10b 1
@@ -571,21 +595,21 @@ R1
 IaPJW1fAXcP_O_IFME;d]c2
 R2
 R0
-R3
+R12
 8right.v
 Fright.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vshifter
 R1
 !i10b 1
@@ -593,21 +617,21 @@ R1
 I65i_h]Qb?<`_fCIMS@aEz0
 R2
 R0
-R3
+R12
 8shifter.v
 Fshifter.v
 R13
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vwb
 R1
 !i10b 1
@@ -615,21 +639,21 @@ R1
 IE@8A^Yd1^F0@ijVAZ=f4c0
 R2
 R0
-R3
+R12
 8wb.v
 Fwb.v
 L0 8
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9
 vxor2
 R1
 !i10b 1
@@ -637,18 +661,18 @@ R1
 I`M4WY^PEe6=IS<i6TADHa1
 R2
 R0
-R3
+R12
 8xor2.v
 Fxor2.v
 L0 7
-R4
+R3
 r1
 !s85 0
 31
+R4
+R10
 R5
-R11
-R6
 !i113 1
+R6
 R7
 R8
-R9

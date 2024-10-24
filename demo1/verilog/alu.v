@@ -37,7 +37,7 @@ module alu (InA, InB, Cin, Oper, invA, invB, sign, Out, instruct, ZF, OF, SF, CF
     //invert A if needed
     assign actA = (invA | (actualOp === `SUB)) ? ~InA : InA;
     //invert B if needed
-    assign actB = (invB | (actualOp === `ANDN))? ~InB : InB;
+    assign actB = (Oper == `RTA) ? (16'b0):((invB | (actualOp === `ANDN))? ~InB : InB);
     
     shifter shift(.In(actA), .ShAmt(actB[3:0]), .Oper(actualOp[1:0]), .Out(out_shft));
 

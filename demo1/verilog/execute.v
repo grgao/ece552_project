@@ -56,6 +56,7 @@ alu_out, srcb_out, next_PC_out, wb_out, setrd, regsrc_out, alujmp_out, brchcnd, 
    alu alu1(.InA(asrc), .InB(bsrc), .Cin(inva | invb | (instruct == `SUB)), .Oper(aluopr), .invA(inva | (instruct == `SUB)), .invB(invb), 
             .sign(1'b1), .Out(alu_out), .instruct(instruct), .ZF(ZF), .OF(OF), .SF(SF), .CF(CF));
 
+
    branchCondition bc2(.branch(branch), .SF(SF), .ZF(ZF), .OF(OF), .CF(CF), .brchcnd(brchcnd), .setrd(setrd));
 
    mux2_1 mux1(.in0(eightBits), .in1(elevenBits), .sel(immsrc), .out(jmpSource));

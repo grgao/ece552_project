@@ -1,0 +1,15 @@
+/home/chent/ece552/ece552_project/demo1/simpleTest
+/home/chent/ece552/ece552_project/demo1/simpleTest/add_0.asm
+/home/chent/ece552/ece552_project/demo1/simpleTest/add_1.asm
+/home/chent/ece552/ece552_project/demo1/simpleTest/add_2.asm
+/home/chent/ece552/ece552_project/demo1/simpleTest/addi_0.asm
+/home/chent/ece552/ece552_project/demo1/simpleTest/addi_2.asm
+/home/chent/ece552/ece552_project/demo1/simpleTest/addi_3.asm
+/home/chent/ece552/ece552_project/demo1/simpleTest/andn_0.asm
+/home/chent/ece552/ece552_project/demo1/simpleTest/andn_1.asm
+/home/chent/ece552/ece552_project/demo1/simpleTest/andn_2.asm
+/home/chent/ece552/ece552_project/demo1/simpleTest/andni_0.asm
+/home/chent/ece552/ece552_project/demo1/simpleTest/andni_1.asm
+/home/chent/ece552/ece552_project/demo1/simpleTest/andni_2.asm
+/home/chent/ece552/ece552_project/demo1/simpleTest/andni_3.asm
+/home/chent/ece552/ece552_project/demo1/simpleTest/andni_4.asm

@@ -1,36 +1,26 @@
+
 module branchCondition(branch, SF, ZF, OF, CF, brchcnd, setrd);
     `include "opcodes.v"  
-    input [3:0] branch;
-    input SF;
-    input ZF;
-    input OF;
-    input CF;
-    output brchcnd;
-    output setrd;
+    input wire [3:0] branch;
+    input wire SF;
+    input wire ZF;
+    input wire OF;
+    input wire CF;
+    output wire brchcnd;
+    output wire setrd;
 
-    reg setbrchcnd, setSetRd;
+    wire beqz, bnez, bltz, bgez, jump, seq, slt, sle, sco;
 
-    assign brchcnd = setbrchcnd;
-    assign setrd = setSetRd;
+    assign beqz = (branch === `BEQZ) && ZF;
+    assign bnez = (branch === `BNEZ) && ~ZF;
+    assign bltz = (branch === `BLTZ) && SF;
+    assign bgez = (branch === `BGEZ) && (ZF |(~SF));
+    assign seq = (branch === `SEQ) && ZF;
+    assign slt = (branch === `SLT) && SF;
+    assign sle = (branch === `SLE) && (SF|ZF);
+    assign sco = (branch === `SCO) && CF;
 
-    always @(*) begin
-        setSetRd = 0;
-        setbrchcnd = 0;
+    assign brchcnd = (branch === `JUMP) | beqz | bnez | bltz| bgez;
+    assign setrd = seq | slt | sle | sco;
 
-        case(branch)
-            `BEQZ: setbrchcnd = ZF;
-            `BNEZ: setbrchcnd = ~ZF;
-            `BLTZ: setbrchcnd = SF;
-            `BGEZ: setbrchcnd = ZF | (~SF);
-            `JUMP: setbrchcnd = 1'b1;
-            `SEQ: setSetRd = ZF;
-            `SLT: setSetRd = SF;
-            `SLE: setSetRd = SF | ZF;
-            `SCO: setSetRd = CO;
-            default: begin
-                setSetRd = 0;
-                setbrchcnd = 0;
-            end
-        endcase
-    end
 endmodule

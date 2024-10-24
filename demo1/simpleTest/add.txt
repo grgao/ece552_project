@@ -1,0 +1,7 @@
+/home/chent/ece552/ece552_project/demo1/simpleTest/add_0.asm
+/home/chent/ece552/ece552_project/demo1/simpleTest/add_1.asm
+/home/chent/ece552/ece552_project/demo1/simpleTest/add_2.asm
+/home/chent/ece552/ece552_project/demo1/simpleTest/addi_0.asm
+/home/chent/ece552/ece552_project/demo1/simpleTest/addi_1.asm
+/home/chent/ece552/ece552_project/demo1/simpleTest/addi_2.asm
+/home/chent/ece552/ece552_project/demo1/simpleTest/addi_3.asm

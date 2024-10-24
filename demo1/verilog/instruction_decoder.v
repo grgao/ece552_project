@@ -65,13 +65,7 @@ module instruction_decoder(instruction, regdst, ext, regwrt, bsource, branch, al
         setmemwrt = 0;
         setimmsrc = 0;
         setasource = 0;
-        setregsrc = 0;
-        setmemread = 0;
-
-        casex(instruction)
-            5'b00000: begin //halt
-                setdmp = 1;
-            end
+        setregsrc = 0;begin
             5'b00001: begin//Nop
             end
             5'b00010: begin // siic RS
