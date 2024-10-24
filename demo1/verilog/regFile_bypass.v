@@ -26,8 +26,8 @@ module regFile_bypass (
    wire [15:0] read1DataIn, read2DataIn, writeDataff;
    wire writeEnff;
    wire [2:0] writeRegSelff, read1RegSelff, read2RegSelff;
-   assign read1Data = (((writeEn ^ writeEnff) == 1'b1) && (writeRegSelff == read1RegSelff)) ? writeDataff : read1DataIn;
-   assign read2Data = (((writeEn ^ writeEnff) == 1'b1) && (writeRegSelff == read2RegSelff)) ? writeDataff : read2DataIn;
+   assign read1Data = ((writeEnff == 1'b1) && (writeRegSelff == read1RegSel)) ? writeDataff : read1DataIn;
+   assign read2Data = ((writeEnff == 1'b1) && (writeRegSelff == read2RegSel)) ? writeDataff : read2DataIn;
    register register(.in(writeData), .out(writeDataff), .clk(clk), .rst(rst));
    register #(.WIDTH(1)) register1(.in(writeEn), .out(writeEnff), .clk(clk), .rst(rst));
    register #(.WIDTH(3)) register2(.in(writeRegSel), .out(writeRegSelff), .clk(clk), .rst(rst));

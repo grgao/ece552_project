@@ -1,7 +1,8 @@
-# vsim -c ../simple/add_0.asm -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
-# Start time: 16:52:54 on Oct 22,2024
-# ** Error (suppressible): (vsim-19) Failed to access library '../simple/add_0' at "../simple/add_0".
-# No such file or directory. (errno = ENOENT)
+# vsim -c proc_hier_bench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 17:49:31 on Oct 23,2024
+# ** Error: (vsim-3170) Could not find 'proc_hier_bench'.
+#         Searched libraries:
+#             /home/lyuh/ece552/__work
 # Error loading design
-# End time: 16:52:54 on Oct 22,2024, Elapsed time: 0:00:00
+# End time: 17:49:32 on Oct 23,2024, Elapsed time: 0:00:01
 # Errors: 1, Warnings: 0

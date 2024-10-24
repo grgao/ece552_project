@@ -214,4 +214,3 @@
 /home/lyuh/ece552/simple/xori_7.asm
 /home/lyuh/ece552/simple/xori_8.asm
 /home/lyuh/ece552/simple/xori_9.asm
-/home/lyuh/ece552/simple/simple.txt

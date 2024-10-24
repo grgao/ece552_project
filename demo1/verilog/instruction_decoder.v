@@ -83,6 +83,7 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
             5'b00001: begin//Nop
             end
             5'b00010: begin // siic RS
+                setaluop = `RTA;
             end
             5'b00011: begin // NOP / RTI
             end
@@ -94,16 +95,21 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
                 setbranch = `JUMP;
                 setalujmp = 1;
                 setbsource = 2'b10;
+                setaluop = `ADD;
             end
             5'b00110: begin // JAL displacement
                 setregdst = 2'b11; // write data to R7
                 setbranch = `JUMP;
+                setregwrt = 1;
+                setimmsrc = 1;
             end
             5'b00111: begin // JALR Rs, immediate
                 setregdst = 2'b11; // write data to R7
                 setalujmp = 1;
                 setbsource = 2'b10;
                 setbranch = `JUMP;
+                setregwrt = 1;
+                setaluop = `ADD;
             end
             5'b01000: begin//ADDI Rd, Rs, immediate
                 setregdst = 2'b00;
@@ -188,6 +194,7 @@ module instruction_decoder(instruction, regdst, sel0ext, regwrt, bsource, branch
             5'b10100: begin //ROLI Rd, Rs, immediate
                 setregdst = 2'b00;
                 setbsource = 2'b01;
+                setregsrc = 2'b10;
                 setregwrt = 1;
                 setaluop = `RLL;
             end
