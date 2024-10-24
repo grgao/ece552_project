@@ -1,0 +1,10 @@
+/home/lyuh/ece552/random
+/home/lyuh/ece552/random/t_1_all.asm
+/home/lyuh/ece552/random/t_2_all.asm
+/home/lyuh/ece552/random/t_3_all.asm
+/home/lyuh/ece552/random/t_4_all.asm
+/home/lyuh/ece552/random/t_5_all.asm
+/home/lyuh/ece552/random/t_6_all.asm
+/home/lyuh/ece552/random/t_7_all.asm
+/home/lyuh/ece552/random/t_8_all.asm
+/home/lyuh/ece552/random/random.txt

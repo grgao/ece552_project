@@ -1,0 +1,8 @@
+/home/lyuh/ece552/random/t_1_ctrl.asm
+/home/lyuh/ece552/random/t_2_ctrl.asm
+/home/lyuh/ece552/random/t_3_ctrl.asm
+/home/lyuh/ece552/random/t_4_ctrl.asm
+/home/lyuh/ece552/random/t_5_ctrl.asm
+/home/lyuh/ece552/random/t_6_ctrl.asm
+/home/lyuh/ece552/random/t_7_ctrl.asm
+/home/lyuh/ece552/random/t_8_ctrl.asm

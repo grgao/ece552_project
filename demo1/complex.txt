@@ -1,0 +1,8 @@
+/home/lyuh/ece552/complex/t_1_all.asm
+/home/lyuh/ece552/complex/t_2_all.asm
+/home/lyuh/ece552/complex/t_3_all.asm
+/home/lyuh/ece552/complex/t_4_all.asm
+/home/lyuh/ece552/complex/t_5_all.asm
+/home/lyuh/ece552/complex/t_6_all.asm
+/home/lyuh/ece552/complex/t_7_all.asm
+/home/lyuh/ece552/complex/t_8_all.asm
