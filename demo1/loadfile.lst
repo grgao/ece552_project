@@ -1,8 +1,9 @@
-          // Original test: ./benson/hw4/problem6/andni_4.asm
-          // Author: benson
-          // Test source code follows
-          
-          
-0000 c17e lbi r1, 126
-0002 5955 andni r2, r1, 21
-0004 0000 halt
+          // Test provided by Karu 
+0000 c102 lbi r1, 2
+0002 c304 lbi r3, 4
+          // should jump to PC=0x000a
+          // skip the 2 add instructions
+0004 2908 jr r1, 8 
+0006 d968 add r2, r1, r3
+0008 d96c add r3, r1, r3
+000a 0000 halt
